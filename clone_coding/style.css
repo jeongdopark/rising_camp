@@ -1,0 +1,336 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+
+
+
+.black-nav{
+    background-color: black;
+}
+
+.black-nav > p {
+    height : 40px;
+    padding-top : 20px;
+    text-align: center;
+    text-decoration: underline;
+    color : white;
+    font-size : 14px;
+    width : 100%;
+    background-color: black;
+}
+
+.black-nav-element-wrap{
+    display : flex;
+    flex-direction: row;
+    background-color: black;
+    color : white;
+    width : 92%;
+    height : 60px;
+    margin : 0 auto;
+    padding-top : 20px;
+    align-items: center;
+}
+
+.black-nav-element1{
+    display: flex;
+    align-items: center;
+    width : 40%;
+}
+.black-nav-element1 > h1{
+    margin-left : 10px;
+}
+
+.black-nav-element2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width : 20%;
+    padding-right: 200px;
+}
+
+.black-nav-element2 > h3{
+    padding-right : 20px;
+    font-size : 15px;
+    font-weight : normal;
+}
+
+.black-nav-element3{
+    display: flex;
+    align-items: center;
+    width : 20%;
+    height : 70%;
+    justify-content: space-evenly;
+}
+
+.black-nav-element3 > h3{
+    font-weight: normal;
+    font-size : 15px;
+    margin-right : 8px;
+}
+
+.host-wrap{
+    display: flex;
+    align-items: center;
+    width : 80px;
+    height : 100%;
+    background-color: white;
+    border-radius: 30px;
+    font-size : 20px;
+}
+.host-wrap > i {
+    margin: 0 auto;
+    color : gray;
+}
+
+/* ------------------- */
+.black-nav-search-wrap{
+    color : #222222;
+    display : flex;
+    width : 60%;
+    height :70px;
+    background-color: white;
+    margin : 0 auto;
+    border-radius : 50px;
+    justify-content: space-around;
+    font-size : 8px;
+    line-height: 20px;
+    margin-top : 25px;
+}
+
+
+.search-font2{
+    color : #717171;
+    font-weight: 1000;
+    font-size : 14px;
+}
+
+.search-height{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left : 30px;
+    flex-wrap : wrap;
+}
+.search-location{
+    width : 35%;
+    /* background-color: aqua; */
+}
+
+.search-checkin{
+    width : 20%;
+    /* background-color: blanchedalmond; */
+}
+.search-checkout{
+    width : 20%;
+    /* background-color: yellow; */
+}
+
+.search-numbers{
+    width : 30%;
+    /* background-color: violet; */
+}
+.search-numbers-icon{
+    width : 50px;
+    height : 50px;
+    display: block;
+    background-color: #ff385c;
+    border-radius: 50%;
+    position : relative;
+    left : 20%;
+    text-align: center;
+    line-height: 50px;
+    font-size : 18px;
+    color : white;
+    font-weight: lighter;
+}
+
+.search-line{
+    display: block;
+    position: relative;
+    top : 21px;
+    width : 0.1px;
+    height : 38px;
+    background-color : #d0d0d0;
+    border : 0.5px solid #d0d0d0;
+}
+
+
+
+
+/* ------------------------------ */
+.uk-section-wrap{
+    
+    width : 100%;
+    height : 500px;
+    background-color: black;;
+    padding-top : 50px;
+    
+}
+
+.uk-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width : 92%;
+    height : 350px;
+    background-color: #ff385c;
+    margin : 0 auto;
+    border-radius: 15px;
+
+}
+.uk-section > p{
+    font-size : 30px;
+    text-align: center;
+    color : #ffffff;
+}
+.uk-section > div{
+    margin-top : 20px;
+    display: block;
+    width : 130px;
+    height : 40px;
+    color : #ffffff;
+    border : 1px solid #ffffff;
+    border-radius : 10px;
+    text-align: center;
+    line-height : 40px;
+}
+
+/* ------------------------------ */
+
+.search-section-wrap{
+    display: flex;
+    width : 100%;
+    height : 790px;
+    background: linear-gradient(black 50%, white 50%);
+    justify-content: center;
+}
+.search-section-img-wrap{
+    width : 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+.search-section-img{
+    background-image: url('https://a0.muscache.com/im/pictures/4b75813b-bc09-4719-b6b8-06a5f170724d.jpg?im_w=1920');
+    height : 100%;
+    width : 89%;
+    
+    border-radius: 10px;
+    margin : 0 auto;
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.search-section-img > h1 {
+    font-size : 45px;
+    font-weight: 500;
+    color : white;
+    text-align: center;
+    position : relative;
+    top : 65%;
+}
+
+.search-section-img > div {
+    width : 150px;
+    height : 50px;
+    display: block;
+    background-color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 25px;
+    position : relative;
+    top: 70%;
+    margin : 0 auto;
+    color : #6F019C;
+    font-weight: bold;
+    font-size : 18px;
+}
+
+
+/* -------------------------------- */
+/* 서울 https://a0.muscache.com/im/pictures/19d4c139-3615-4440-b5e3-55ee3f87e240.jpg?im_w=320 */
+/* 인천 https://a0.muscache.com/im/pictures/56ea1c5b-dcde-45b3-af40-9de6bbe984b5.jpg?im_w=320 */
+/* 대구 https://a0.muscache.com/im/pictures/1e5fc501-e1ed-4de4-be9f-811e9de0a0d2.jpg?im_w=320 */
+/* 대전 https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_w=320 */
+
+
+.city-section-wrap{
+    width : 89%;
+    height : 400px;
+    background-color: #ff385c;
+    margin : 0 auto;
+    padding-top : 50px;
+}
+
+.city-section-wrap > h1 {
+    color : #222222;
+    font-size : 25px;
+    font-weight: 500;
+}
+
+.city-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.city-wrap-common{
+    display : flex;
+    flex-direction: column;
+    width : 300px;
+    height : 420px;
+    background-color: yellow;
+    border-radius: 20px;
+}
+
+.city-img{
+    width : 100%;
+    height : 50%;
+    border-radius: 20px 20px 0 0 ;
+}
+
+.seoul-img{
+    background-image: url('https://a0.muscache.com/im/pictures/19d4c139-3615-4440-b5e3-55ee3f87e240.jpg?im_w=320');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.incheon-img{
+    background-image: url('https://a0.muscache.com/im/pictures/56ea1c5b-dcde-45b3-af40-9de6bbe984b5.jpg?im_w=320');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.daegu-img{
+    background-image: url('https://a0.muscache.com/im/pictures/1e5fc501-e1ed-4de4-be9f-811e9de0a0d2.jpg?im_w=320');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.daejeon-img{
+    background-image: url('https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_w=320');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.city-info{
+    height : 50%;
+    border-radius: 0 0 20px 20px;
+}
+
+.seoul{
+    background-color: #bc1a6e;
+}
+
+.incheon{
+    background-color: #CC2D4A;
+}
+
+.daegu{
+    background-color: #DE3151;
+}
+
+.daejeon{
+    background-color: #D93B30;
+}
