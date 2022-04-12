@@ -177,7 +177,7 @@
     height : 350px;
     background-color: #ff385c;
     margin : 0 auto;
-    border-radius: 15px;
+    border-radius: 10px;
 
 }
 .uk-section > p{
@@ -258,16 +258,17 @@
 
 .city-section-wrap{
     width : 89%;
-    height : 400px;
-    background-color: #ff385c;
+    height : 600px;
+    background-color: #ffffff;
     margin : 0 auto;
-    padding-top : 50px;
+    
 }
 
 .city-section-wrap > h1 {
     color : #222222;
-    font-size : 25px;
+    font-size : 45px;
     font-weight: 500;
+    padding : 50px 0 50px 0;  
 }
 
 .city-wrap{
@@ -281,13 +282,13 @@
     width : 300px;
     height : 420px;
     background-color: yellow;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .city-img{
     width : 100%;
     height : 50%;
-    border-radius: 20px 20px 0 0 ;
+    border-radius: 10px 10px 0 0 ;
 }
 
 .seoul-img{
@@ -316,9 +317,20 @@
 
 .city-info{
     height : 50%;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px;
+    color : white;
+}
+.city-info > h1{
+    padding : 20px 20px 10px 20px;
+    font-size : 35px;
+    font-weight: 400;
 }
 
+.city-info > h3{
+    padding-left : 20px;
+    font-size : 20px;
+    font-weight: 350;
+}
 .seoul{
     background-color: #bc1a6e;
 }
@@ -333,4 +345,175 @@
 
 .daejeon{
     background-color: #D93B30;
+}
+
+
+
+/* --------------------------- */
+.activity-section-wrap{
+    width : 89%;
+    height : 800px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    
+}
+.activity-section-wrap > h1{
+    color : #222222;
+    font-size : 45px;
+    font-weight: 500;
+    padding : 50px 0 50px 0;  
+}
+
+
+.activity-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.activity-common{
+    width : 49%;
+    height : 650px;
+    background-color: #717171;
+    border-radius: 10px;
+}
+.activity-common > h1{
+    font-size: 50px;
+    color : white;
+    font-weight: 500;
+    padding : 70px 50px 30px 70px;
+}
+.activity-common > div{
+    background-color: white;
+    color : black;
+}
+.journey{
+    background-image: url('https://a0.muscache.com/im/pictures/ae7fadb9-0b76-49a7-a45a-835a7390144e.jpg?im_w=960');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+.journey > div{
+    position: relative;
+    left : 65px;
+    width : 70px;
+    height : 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.home{
+    background-image: url('https://a0.muscache.com/im/pictures/2e9e0381-68d8-4961-abf2-a4f897b41fa8.jpg?im_w=960');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.home > div{
+    position: relative;
+    left : 65px;
+    width : 120px;
+    height : 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+/* https://a0.muscache.com/im/pictures/ae7fadb9-0b76-49a7-a45a-835a7390144e.jpg?im_w=960 */
+/* https://a0.muscache.com/im/pictures/2e9e0381-68d8-4961-abf2-a4f897b41fa8.jpg?im_w=960 */
+
+.question-section-wrap{
+    width : 100%;
+    margin-top : 100px;
+    height : 630px;
+}
+.question-section{
+    background-image: url('https://a0.muscache.com/im/pictures/0903a029-e330-41f6-add2-652954f62185.jpg?im_w=1440');
+    background-size : cover;
+    background-repeat: no-repeat;
+    width : 89%;
+    height : 630px;
+    margin : 0 auto;
+    border-radius: 10px;
+    
+}
+.question-section > h1{
+    font-size: 92px;
+    color : white;
+    padding : 80px;
+}
+
+.question-section > div{
+    display: block;
+    width : 220px;
+    height : 50px;
+    background-color: white;
+    color : black;
+    margin-left: 80px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* ----------------------------- */
+
+.link-section-wrap{
+    width : 100%;
+    height : 400px;
+    background-color: #6F019C;
+    margin-top : 50px;
+    background-color: #F7F7F7;
+}
+
+.link-wrap{
+    list-style-type: none;
+    font-size : 14px
+}
+
+.ul-wrap{
+    display :flex;
+    justify-content: space-between;
+    width : 89%;
+    height : 200px;
+    
+    margin : 0 auto;
+    padding-top : 50px;
+}
+
+.links:not(.bold){
+    font-weight: 350;
+}
+.links{
+    padding-top : 20px;
+}
+.bold{
+    font-weight: bold;
+}
+
+/* -------------------------- */
+.footer-section-wrap{
+    width : 100%;
+    background-color: #F7F7F7;
+    height : 70px;
+    font-size: 13px;
+}
+
+.footer-wrap{
+    padding-top : 20px;
+    margin : 0 auto;
+    border-top: 1px solid #dddddd;
+    width : 89%;
+}
+
+.footer-left{
+    display: flex;
+    justify-self: center;
+    line-height: 40px;
+}
+
+.footer-left > h3{
+    
+    font-size : 14px;
+    padding-right : 7px;
+    font-weight: 350;
 }
