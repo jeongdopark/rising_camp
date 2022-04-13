@@ -63,7 +63,9 @@
     justify-content: space-evenly;
 }
 
-.black-nav-element3 > h3{
+.black-nav-element3 > a{
+    text-decoration-line : none;
+    color : white;
     font-weight: normal;
     font-size : 15px;
     margin-right : 8px;
