@@ -6,6 +6,7 @@ const videoSectionImg = document.querySelector('.video1-section-image');
 const videoSectionH = document.querySelector('.video1-section-h3');
 const navSection = document.querySelector('.nav-section')
 const icon = document.querySelector('.icon-wrap');
+
 let playStatus = false; // True는 재생이 종료된 상태 또는 일시정지 상태
 
 navSection.classList.add('nope')
@@ -64,4 +65,45 @@ playBtn.addEventListener('click', () => {
     videoStatus()
 })
 
+// -------------------------------------
 
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+const carousel = document.querySelectorAll('.carousel');
+const infoSection = document.querySelectorAll('.info-wrap');
+const carouselWrap = document.querySelector('.carousel-wrap');
+let carouselCount = carousel.length;
+let currentCarousel = 1;
+let currentLeft = -350;
+
+for(i=0; i<infoSection.length; i++){
+    infoSection[i].style.opacity = '0';
+}
+infoSection[currentCarousel].style.opacity = '1';
+
+const moveCarousel = (currentIdx, direction) => {
+    infoSection[currentCarousel].style.opacity = '0';
+    infoSection[currentIdx].style.opacity = '1';
+    currentCarousel = currentIdx;
+    if(direction == true){
+        carouselWrap.style.left = (currentLeft -450)+'px';
+        currentLeft -= 450;
+        
+    }else{
+        carouselWrap.style.left = (currentLeft +450)+'px';
+        currentLeft += 450;
+    }
+    
+}
+
+rightBtn.addEventListener('click', () => {
+    if(currentCarousel < carousel.length-3){
+        moveCarousel(currentCarousel+1, true)
+    }
+})
+
+leftBtn.addEventListener('click', () => {
+    if(currentCarousel > 0){
+        moveCarousel(currentCarousel-1, false)
+    }
+})
