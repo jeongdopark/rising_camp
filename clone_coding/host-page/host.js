@@ -1,26 +1,42 @@
 
 
 const video = document.querySelector('.first-video');
+const video2 = document.querySelector('.second-video');
 const playBtn = document.querySelector('.play-btn');
+const playBtn2 = document.querySelector('.play-btn-2');
 const videoSectionImg = document.querySelector('.video1-section-image');
 const videoSectionH = document.querySelector('.video1-section-h3');
 const navSection = document.querySelector('.nav-section')
+const navSection2 = document.querySelector('.nav-section2')
 const icon = document.querySelector('.icon-wrap');
 
-let playStatus = false; // True는 재생이 종료된 상태 또는 일시정지 상태
 
-navSection.classList.add('nope')
+let playStatus = false; // True는 재생이 종료된 상태 또는 일시정지 상태
+let playStatus2 = false
+navSection.classList.add('nope');
+navSection2.classList.add('nope');
 window.addEventListener('scroll', () => {
-    const scrollTop = document.documentElement.scrollTop;
-    if(scrollTop > 700){
+    let scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop);
+    if(scrollTop > 700 && scrollTop < 4468){
+        navSection2.classList.remove('seen')
+        navSection2.classList.add('nope');
         navSection.classList.remove('nope')
         navSection.classList.add('seen')
-
-    }else{
+        navSection.style.position = 'fixed'
+        
+    }else if(scrollTop > 4468){
+        console.log(scrollTop);
+        navSection2.classList.remove('nope')
+        navSection2.classList.add('seen')
         navSection.classList.remove('seen')
         navSection.classList.add('nope')
-
-        
+        console.log('hello');
+    }else{
+        navSection2.classList.remove('seen')
+        navSection2.classList.add('nope');
+        navSection.classList.remove('seen')
+        navSection.classList.add('nope')
     }
 })
 
@@ -35,6 +51,19 @@ const videoStatus = () => {
         video.pause()
         playStatus = true
         playBtn.innerHTML = `<i class="fa-solid fa-play"></i> `
+    }
+}
+
+const videoStatus2 = () => {
+    if(playStatus2 == true){
+        video2.play()
+        playStatus2 = false
+        playBtn2.innerHTML = `<i class="fa-solid fa-pause"></i>`
+        
+    }else{
+        video2.pause()
+        playStatus2 = true
+        playBtn2.innerHTML = `<i class="fa-solid fa-play"></i> `
     }
 }
 
@@ -60,9 +89,20 @@ setInterval(() => {
     }
 }, 500)
 
+
+setInterval(() => {
+    currentTime = video2.currentTime;
+    if(video2.ended){
+        playStatus2 = true
+        playBtn2.innerHTML = `<i class="fa-solid fa-play"></i>`
+    }
+})
 // 플레이 버튼 클릭시 videoStatus 함수 실행
 playBtn.addEventListener('click', () => {    
     videoStatus()
+})
+playBtn2.addEventListener('click', () => {    
+    videoStatus2()
 })
 
 // -------------------------------------
@@ -107,3 +147,4 @@ leftBtn.addEventListener('click', () => {
         moveCarousel(currentCarousel-1, false)
     }
 })
+
