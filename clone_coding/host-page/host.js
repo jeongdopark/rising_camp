@@ -6,17 +6,23 @@ const playBtn = document.querySelector('.play-btn');
 const playBtn2 = document.querySelector('.play-btn-2');
 const videoSectionImg = document.querySelector('.video1-section-image');
 const videoSectionH = document.querySelector('.video1-section-h3');
-const navSection = document.querySelector('.nav-section')
-const navSection2 = document.querySelector('.nav-section2')
+const navSection = document.querySelector('.nav-section');
+const navSection2 = document.querySelector('.nav-section2');
 const icon = document.querySelector('.icon-wrap');
+const scrollDown = document.querySelector('.move-down-btn');
 
+scrollDown.addEventListener('click', () => {
+    window.scrollTo({top:840, behavior:'smooth'});
+})
 
 let playStatus = false; // True는 재생이 종료된 상태 또는 일시정지 상태
 let playStatus2 = false
 navSection.classList.add('nope');
 navSection2.classList.add('nope');
 window.addEventListener('scroll', () => {
+    
     let scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop);
     console.log(scrollTop);
     if(scrollTop > 700 && scrollTop < 4468){
         navSection2.classList.remove('seen')
@@ -26,7 +32,6 @@ window.addEventListener('scroll', () => {
         navSection.style.position = 'fixed'
         
     }else if(scrollTop > 4468){
-        console.log(scrollTop);
         navSection2.classList.remove('nope')
         navSection2.classList.add('seen')
         navSection.classList.remove('seen')
