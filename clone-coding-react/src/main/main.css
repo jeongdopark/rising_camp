@@ -1,0 +1,641 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+
+.host-wrap-icons{
+    color : black;
+    margin-top : 10px;
+}
+
+.go{
+    transform: translate(0, 10px);
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+.test{
+    position : fixed;
+    top : 0;
+}
+
+.none{
+    display : none;
+}
+.seen{
+    display : flex;
+}
+
+.black-nav{
+    background-color: black;
+}
+
+.nav-wrap{
+    transition : opacity 1s ease-in;
+}
+
+.black-nav > p {
+    height : 40px;
+    padding-top : 20px;
+    text-align: center;
+    text-decoration: underline;
+    color : white;
+    font-size : 14px;
+    width : 100%;
+    background-color: black;
+}
+
+.black-nav-element-wrap{
+    display : flex;
+    flex-direction: row;
+    background-color: black;
+    color : white;
+    width : 92%;
+    height : 60px;
+    margin : 0 auto;
+    padding-top : 20px;
+    align-items: center;
+}
+
+.black-nav-element1{
+    display: flex;
+    align-items: center;
+    width : 40%;
+}
+
+.black-nav-element1 > h1{
+    margin-left : 10px;
+}
+
+.black-nav-element2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width : 20%;
+    padding-right: 200px;
+}
+
+.black-nav-element2 > h3{
+    padding-right : 20px;
+    font-size : 15px;
+    font-weight : normal;
+}
+
+.black-nav-element3{
+    display: flex;
+    align-items: center;
+    width : 20%;
+    height : 70%;
+    justify-content: space-evenly;
+}
+
+.black-nav-element3 > a{
+    text-decoration-line : none;
+    color : white;
+    font-weight: normal;
+    font-size : 15px;
+    margin-right : 8px;
+}
+
+.host-wrap{
+    display: flex;
+    justify-content: space-around;
+    width : 80px;
+    height : 100%;
+    background-color: white;
+    border : 1px solid gray;
+    border-radius: 30px;
+    font-size : 20px;
+}
+.host-wrap > i {
+    margin: 0 auto;
+    color : gray;
+}
+
+/* ------------------- */
+.black-nav-search-wrap{
+    color : #222222;
+    display : flex;
+    width : 60%;
+    height :70px;
+    background-color: white;
+    margin : 0 auto;
+    border-radius : 50px;
+    justify-content: space-around;
+    font-size : 8px;
+    line-height: 20px;
+    margin-top : 25px;
+}
+
+
+.search-font2{
+    color : #717171;
+    font-weight: 1000;
+    font-size : 14px;
+}
+
+.search-height{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left : 30px;
+    flex-wrap : wrap;
+}
+.search-location{
+    width : 35%;
+    /* background-color: aqua; */
+}
+
+.search-checkin{
+    width : 20%;
+    /* background-color: blanchedalmond; */
+}
+.search-checkout{
+    width : 20%;
+    /* background-color: yellow; */
+}
+
+.search-numbers{
+    width : 30%;
+    /* background-color: violet; */
+}
+.search-numbers-icon{
+    width : 50px;
+    height : 50px;
+    display: block;
+    background-color: #ff385c;
+    border-radius: 50%;
+    position : relative;
+    left : 20%;
+    text-align: center;
+    line-height: 50px;
+    font-size : 18px;
+    color : white;
+    font-weight: lighter;
+}
+
+.search-line{
+    display: block;
+    position: relative;
+    top : 21px;
+    width : 0.1px;
+    height : 38px;
+    background-color : #d0d0d0;
+    border : 0.5px solid #d0d0d0;
+}
+
+/* ---------------------------- */
+.white-search-wrap{
+    display: flex;
+    flex-direction: row;
+}
+.white-nav-wrap{
+    display: flex;
+    flex-direction: row;
+    height : 80px;
+    background-color: white;
+    width : 100%;
+    animation : move 0.1s ease-in;
+    
+}
+
+@keyframes move { 
+    0% { transform: translate(0, 235px) } 
+    25% { transform: translate(0, 170px) } 
+    50% { transform: translate(0, 110px) } 
+    75% { transform: translate(0, 50px) } 
+    100% { transform: translate(0, 0px) } 
+}
+
+
+
+.white-nav-element1{
+    display: flex;
+    align-items: center;
+    width : 35%;
+    margin-left : 55px;
+    font-size : 13px;
+    color : #ff385c;
+}
+.white-nav-element1 > i{
+    font-size : 2rem;
+}
+.white-nav-element1 > h1{
+    margin-left : 10px;
+}
+
+.white-search{
+    display: flex;
+    flex-direction: row;
+    margin-top : 15px;
+    border-radius : 25px;
+    width : 300px;
+    height : 50px;
+    background-color: white;
+    align-items: center;
+    box-shadow: rgb(221 221 221) 0px 0px 0px 1px inset, rgb(0 0 0 / 18%) 0px 2px 4px ;
+}
+
+.white-search > h3{
+    margin-left : 20px;
+    line-height : 50px;
+    font-weight: 400;
+    font-size : 16px;
+}
+
+.search-numbers-icon2 > i{
+    font-size : 15px;
+}
+
+.search-numbers-icon2{
+    
+    margin-left: 95px;
+    width : 30px;
+    height : 30px;
+    display: block;
+    background-color: #ff385c;
+    border-radius: 50%;
+    position : relative;
+    left : 20%;
+    text-align: center;
+    line-height: 30px;
+    font-size : 18px;
+    color : white;
+    font-weight: lighter;
+}
+
+.white-nav-element3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width : 20%;
+    height : 100%;
+    justify-content: space-evenly;
+    margin-left : 186px;
+}
+
+.white-nav-element3 > a{
+    text-decoration-line : none;
+    color : black;
+    font-weight: normal;
+    font-size : 15px;
+    margin-right : 8px;
+}
+
+.host-wrap2{
+    display: flex;
+    align-items: center;
+    width : 80px;
+    height : 50%;
+    background-color: white;
+    border : 1px solid gray;
+    border-radius: 30px;
+    font-size : 20px;
+}
+.host-wrap2 > i {
+    margin: 0 auto;
+    color : gray;
+}
+
+
+/* ------------------------------ */
+.uk-section-wrap{
+    
+    width : 100%;
+    height : 500px;
+    background-color: black;;
+    padding-top : 50px;
+    
+}
+
+.uk-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width : 92%;
+    height : 350px;
+    background-color: #ff385c;
+    margin : 0 auto;
+    border-radius: 10px;
+
+}
+.uk-section > p{
+    font-size : 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    color : #ffffff;
+}
+.uk-section > div{
+    margin-top : 20px;
+    display: block;
+    width : 130px;
+    height : 40px;
+    color : #ffffff;
+    border : 1px solid #ffffff;
+    border-radius : 10px;
+    text-align: center;
+    line-height : 40px;
+}
+
+/* ------------------------------ */
+
+.search-section-wrap{
+    display: flex;
+    width : 100%;
+    height : 790px;
+    background: linear-gradient(black 50%, white 50%);
+    justify-content: center;
+}
+.search-section-img-wrap{
+    width : 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+.search-section-img{
+    background-image: url('https://a0.muscache.com/im/pictures/4b75813b-bc09-4719-b6b8-06a5f170724d.jpg?im_w=1920');
+    height : 100%;
+    width : 89%;
+    
+    border-radius: 10px;
+    margin : 0 auto;
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.search-section-img > h1 {
+    font-size : 45px;
+    font-weight: 500;
+    color : white;
+    text-align: center;
+    position : relative;
+    top : 65%;
+}
+
+.search-section-img > a {
+    text-decoration: none;
+    cursor: pointer;
+    width : 150px;
+    height : 50px;
+    display: block;
+    background-color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 25px;
+    position : relative;
+    top: 70%;
+    margin : 0 auto;
+    color : #6F019C;
+    font-weight: bold;
+    font-size : 18px;
+}
+
+
+/* -------------------------------- */
+/* 서울 https://a0.muscache.com/im/pictures/19d4c139-3615-4440-b5e3-55ee3f87e240.jpg?im_w=320 */
+/* 인천 https://a0.muscache.com/im/pictures/56ea1c5b-dcde-45b3-af40-9de6bbe984b5.jpg?im_w=320 */
+/* 대구 https://a0.muscache.com/im/pictures/1e5fc501-e1ed-4de4-be9f-811e9de0a0d2.jpg?im_w=320 */
+/* 대전 https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_w=320 */
+
+
+.city-section-wrap{
+    width : 89%;
+    height : 600px;
+    background-color: #ffffff;
+    margin : 0 auto;
+    
+}
+
+.city-section-wrap > h1 {
+    color : #222222;
+    font-size : 45px;
+    font-weight: 500;
+    padding : 50px 0 50px 0;  
+}
+
+.city-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.city-wrap-common{
+    display : flex;
+    flex-direction: column;
+    width : 300px;
+    height : 420px;
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.city-img{
+    width : 100%;
+    height : 50%;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.seoul-img{
+    background-image: url('https://a0.muscache.com/im/pictures/19d4c139-3615-4440-b5e3-55ee3f87e240.jpg?im_w=320');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.incheon-img{
+    background-image: url('https://a0.muscache.com/im/pictures/56ea1c5b-dcde-45b3-af40-9de6bbe984b5.jpg?im_w=320');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.daegu-img{
+    background-image: url('https://a0.muscache.com/im/pictures/1e5fc501-e1ed-4de4-be9f-811e9de0a0d2.jpg?im_w=320');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.daejeon-img{
+    background-image: url('https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_w=320');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.city-info{
+    height : 50%;
+    border-radius: 0 0 10px 10px;
+    color : white;
+}
+.city-info > h1{
+    padding : 20px 20px 10px 20px;
+    font-size : 35px;
+    font-weight: 400;
+}
+
+.city-info > h3{
+    padding-left : 20px;
+    font-size : 20px;
+    font-weight: 350;
+}
+.seoul{
+    background-color: #bc1a6e;
+}
+
+.incheon{
+    background-color: #CC2D4A;
+}
+
+.daegu{
+    background-color: #DE3151;
+}
+
+.daejeon{
+    background-color: #D93B30;
+}
+
+
+
+/* --------------------------- */
+.activity-section-wrap{
+    width : 89%;
+    height : 800px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    
+}
+.activity-section-wrap > h1{
+    color : #222222;
+    font-size : 45px;
+    font-weight: 500;
+    padding : 50px 0 50px 0;  
+}
+
+
+.activity-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.activity-common{
+    width : 49%;
+    height : 650px;
+    background-color: #717171;
+    border-radius: 10px;
+}
+.activity-common > h1{
+    font-size: 50px;
+    color : white;
+    font-weight: 500;
+    padding : 70px 50px 30px 70px;
+}
+.activity-common > div{
+    background-color: white;
+    color : black;
+}
+.journey{
+    background-image: url('https://a0.muscache.com/im/pictures/ae7fadb9-0b76-49a7-a45a-835a7390144e.jpg?im_w=960');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+.journey > div{
+    position: relative;
+    left : 65px;
+    width : 70px;
+    height : 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.home{
+    background-image: url('https://a0.muscache.com/im/pictures/2e9e0381-68d8-4961-abf2-a4f897b41fa8.jpg?im_w=960');
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.home > div{
+    position: relative;
+    left : 65px;
+    width : 120px;
+    height : 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+/* https://a0.muscache.com/im/pictures/ae7fadb9-0b76-49a7-a45a-835a7390144e.jpg?im_w=960 */
+/* https://a0.muscache.com/im/pictures/2e9e0381-68d8-4961-abf2-a4f897b41fa8.jpg?im_w=960 */
+
+.question-section-wrap{
+    width : 100%;
+    margin-top : 100px;
+    height : 730px;
+}
+.question-section{
+    background-image: url('https://a0.muscache.com/im/pictures/0903a029-e330-41f6-add2-652954f62185.jpg?im_w=1440');
+    background-size : cover;
+    background-repeat: no-repeat;
+    width : 100%;
+    height : 730px;
+    margin : 0 auto;
+    
+}
+.span-wrap{
+    width : 33%;
+    padding : 80px;
+    color : white;
+}
+
+.span-wrap > span{
+    font-size : 4.5rem;
+    line-height: 80px;
+    font-weight: 600;
+}
+
+.span-wrap > div{
+    width : 45%;
+    height : 45px;
+    border-radius: 10px;
+    text-align: center;
+    line-height :45px;
+    background-color: white;
+    color : black;
+    margin-top : 300px;
+}
+
+
+/* ----------------------------- */
+
+.link-section-wrap{
+    width : 100%;
+    height : 400px;
+    background-color: #6F019C;
+    margin-top : 50px;
+    background-color: #F7F7F7;
+}
+
+.link-wrap{
+    list-style-type: none;
+    font-size : 14px
+}
+
+.ul-wrap{
+    display :flex;
+    justify-content: space-between;
+    width : 89%;
+    height : 200px;
+    
+    margin : 0 auto;
+    padding-top : 50px;
+}
+
+.links:not(.bold){
+    font-weight: 350;
+}
+.links{
+    padding-top : 20px;
+}
+.bold{
+    font-weight: bold;
+}
+
+/* -------------------------- */
