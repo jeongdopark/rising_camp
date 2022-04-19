@@ -8,7 +8,36 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import Cards from './cards';
 const Main = () => {
+    
+    const cardsElement = [
+        {
+            city : 'seoul',
+            color : '#bc1a6e',
+            image : '../images/seoul.webp',
+            distance : '2KM 거리'
+        },
+        {
+            city : 'incheon',
+            color : '#CC2D4A',
+            image : '../images/incheon.webp',
+            distance : '29KM 거리'
+        },
+        {
+            city : 'daegu',
+            color : '#DE3151',
+            image : '../images/daegu.webp',
+            distance : '237KM 거리'
+        },
+        {
+            city : 'daejeon',
+            color : '#D93B30',
+            image : '../images/daejeon.webp',
+            distance : '140KM 거리'
+        }
+        
+    ]
     return(
         <div className="page-wrap">
             <div className="nav-wrap">
@@ -109,8 +138,10 @@ const Main = () => {
             {/* <!--설레는 다음 여행을 위한 아이디어 ------------------------------------------------ --> */}
             <div className="city-section-wrap">
                 <h1>설레는 다음 여행을 위한 아이디어</h1>
-                <div className="city-wrap">
-                    <div className="city-wrap-common ">
+                <Cards cardsElement={cardsElement}/>
+
+                {/* <div className="city-wrap">
+                    <div className="city-wrap-common">
                         <div className="seoul-img city-img"></div>
                         <div className="city-info seoul">
                             <h1>서울</h1>
@@ -138,7 +169,7 @@ const Main = () => {
                             <h3>140km 거리</h3>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             {/* <!-- ------------------------------------------------ --> */}
             <div className="activity-section-wrap">
