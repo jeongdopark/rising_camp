@@ -416,6 +416,7 @@
 
 .city-wrap{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -424,7 +425,6 @@
     flex-direction: column;
     width : 300px;
     height : 420px;
-    background-color: yellow;
     border-radius: 10px;
 }
 
@@ -433,7 +433,7 @@
     height : 50%;
     border-radius: 10px 10px 0 0 ;
 }
-
+/* 
 .seoul-img{
     background-image: url('https://a0.muscache.com/im/pictures/19d4c139-3615-4440-b5e3-55ee3f87e240.jpg?im_w=320');
     background-size : cover;
@@ -456,7 +456,7 @@
     background-image: url('https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_w=320');
     background-size : cover;
     background-repeat: no-repeat;
-}
+} */
 
 .city-info{
     height : 50%;
@@ -474,7 +474,7 @@
     font-size : 20px;
     font-weight: 350;
 }
-.seoul{
+/* .seoul{
     background-color: #bc1a6e;
 }
 
@@ -488,7 +488,7 @@
 
 .daejeon{
     background-color: #D93B30;
-}
+} */
 
 
 
@@ -567,27 +567,28 @@
 
 .question-section-wrap{
     width : 100%;
-    margin-top : 100px;
-    height : 730px;
+    height : 650px;
+    display: flex;
+    justify-content: center;
+    margin : 100px 0 100px 0;
 }
 .question-section{
     background-image: url('https://a0.muscache.com/im/pictures/0903a029-e330-41f6-add2-652954f62185.jpg?im_w=1440');
     background-size : cover;
     background-repeat: no-repeat;
-    width : 100%;
-    height : 730px;
-    margin : 0 auto;
-    
+    width : 89%;
+    height : 100%;
+    border-radius: 10px;
 }
 .span-wrap{
-    width : 33%;
+    width : 45%;
     padding : 80px;
     color : white;
 }
 
 .span-wrap > span{
-    font-size : 4.5rem;
-    line-height: 80px;
+    font-size : 6rem;
+    line-height: 110px;
     font-weight: 600;
 }
 
@@ -599,7 +600,7 @@
     line-height :45px;
     background-color: white;
     color : black;
-    margin-top : 300px;
+    margin-top : 100px;
 }
 
 

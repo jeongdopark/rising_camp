@@ -3,7 +3,7 @@ import './link.css';
 
 const Link = () => {
         return (
-        <div className="link-div-wrap">
+        <div className="link-section-wrap">
             <div className="ul-wrap">
                 <ul className="link-wrap">
                     <li className="links bold">에어비앤비 지원</li>

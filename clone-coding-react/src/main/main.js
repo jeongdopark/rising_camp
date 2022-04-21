@@ -10,7 +10,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import Cards from './cards';
 const Main = () => {
-    
+
     const cardsElement = [
         {
             city : 'seoul',
@@ -27,7 +27,7 @@ const Main = () => {
         {
             city : 'daegu',
             color : '#DE3151',
-            image : '../images/daegu.webp',
+            image : '/Users/mac/Desktop/FE-study/rising_camp/clone-coding-react/src/images/daegu.webp',
             distance : '237KM 거리'
         },
         {
@@ -138,38 +138,11 @@ const Main = () => {
             {/* <!--설레는 다음 여행을 위한 아이디어 ------------------------------------------------ --> */}
             <div className="city-section-wrap">
                 <h1>설레는 다음 여행을 위한 아이디어</h1>
-                <Cards cardsElement={cardsElement}/>
-
-                {/* <div className="city-wrap">
-                    <div className="city-wrap-common">
-                        <div className="seoul-img city-img"></div>
-                        <div className="city-info seoul">
-                            <h1>서울</h1>
-                            <h3>2km 거리</h3>
-                        </div>
-                    </div>
-                    <div className="city-wrap-common">
-                        <div className="incheon-img city-img"></div>
-                        <div className="city-info incheon">
-                            <h1>인천</h1>
-                            <h3>29km 거리</h3>
-                        </div>
-                    </div>
-                    <div className="city-wrap-common">
-                        <div className="daegu-img city-img"></div>
-                        <div className="city-info daegu">
-                            <h1>대구</h1>
-                            <h3>237km 거리</h3>
-                        </div>
-                    </div>
-                    <div className="city-wrap-common">
-                        <div className="daejeon-img city-img"></div>
-                        <div className="city-info daejeon">
-                            <h1>대전</h1>
-                            <h3>140km 거리</h3>
-                        </div>
-                    </div>
-                </div> */}
+                <div className="city-wrap">
+                    {cardsElement.map((prop) => (
+                        <Cards key={prop.city} prop={prop}/>
+                    ))}
+                </div>
             </div>
             {/* <!-- ------------------------------------------------ --> */}
             <div className="activity-section-wrap">

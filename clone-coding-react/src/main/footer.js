@@ -2,7 +2,7 @@ import React from 'react';
 import './footer.css';
 const Footer = () => {
     return(
-        <footer className="footer-div-wrap">
+        <footer className="footer-section-wrap">
                 <div className="footer-wrap">
                     <span className="footer-left">
                         <h3>© 2022 Airbnb, Inc.</h3>
