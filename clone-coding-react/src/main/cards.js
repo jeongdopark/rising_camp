@@ -1,12 +1,12 @@
 import React from 'react';
 import './cards.css';
-import Image from '../images/seoul.webp';
+// import Image from '../images/seoul.webp';
 const Cards = ({prop}) => {
     console.log(prop.image);
-    const backgroundImageURL = "../images/seoul.webp"
+    // const backgroundImageURL = "../images/seoul.webp"
     return(
         <div className="city-wrap-common">
-            <div className="city-img" style={{backgroundImage:`url(${Image})`}}></div>
+            <div className="city-img" style={{backgroundImage:`url(${prop.image})`}}></div>
             <div className="city-info" style={{backgroundColor:`${prop.color}`}}>
                 <h1>{prop.city}</h1>
                 <h3>{prop.distance}</h3>

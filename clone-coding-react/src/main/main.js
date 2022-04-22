@@ -15,13 +15,13 @@ const Main = () => {
         {
             city : 'seoul',
             color : '#bc1a6e',
-            image : '../images/seoul.webp',
+            image : '/images/seoul.webp',
             distance : '2KM 거리'
         },
         {
             city : 'incheon',
             color : '#CC2D4A',
-            image : '../images/incheon.webp',
+            "image" : '../images/incheon.webp',
             distance : '29KM 거리'
         },
         {
@@ -122,7 +122,7 @@ const Main = () => {
             {/* <!--우크라이나 ------------------------------------------------ --> */}
             <div className="uk-section-wrap">
                 <div className="uk-section">
-                    <p>10만 명에 달하는 우크라이나 피란민에게 임시 숙소를 제공해주세요</p>
+                    <span>10만 명에 달하는 우크라이나 피란민에게 임시 숙소를 제공해주세요</span>
                     <div>자세히 알아보기</div>
                 </div>
             </div>
@@ -149,11 +149,11 @@ const Main = () => {
                 <h1>에어비엔비 체험 둘러보기</h1>
                 <div className="activity-wrap">
                     <div className="activity-common journey">
-                        <h1>여행 중 만나는 이색적인 즐길 거리</h1>
+                        <h1>여행 중 만나는 <br/> 이색적인 즐길 거리</h1>
                         <div>체험</div>
                     </div>
                     <div className="activity-common home">
-                        <h1>집에서 만나는 다양한 즐길 거리</h1>
+                        <h1>집에서 만나는 <br/> 다양한 즐길 거리</h1>
                         <div>온라인 체험</div>
                     </div>
                 </div>

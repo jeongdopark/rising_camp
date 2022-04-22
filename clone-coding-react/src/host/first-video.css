@@ -1,0 +1,96 @@
+.video1-section-wrap{
+    height : 100vh;
+    width : 100%;
+    background-color: black;
+    display: flex;
+}
+
+.left-side-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width : 50%;
+}
+
+.left-side-wrap > p{
+    font-size : 60px;
+    font-weight: 600;
+    color : white;
+    text-align: center;
+    margin-top : 100px;
+}
+
+.right-side-wrap{
+    width : 50%;
+}
+.right-side-wrap > video{
+    object-fit: cover;
+    width : 100vh;
+    height : 100vh;
+}
+
+.play-btn{
+    position : relative;
+    bottom : 220px;
+    left : 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width : 40px;
+    height : 40px;
+    border : 0;
+    outline : 0;
+    border-radius: 50%;
+    color : white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.video1-section-image{
+    position : relative;
+    left : 50px;
+    margin-top : 10px;
+    bottom : 200px;
+    width : 200px;
+    height : 100px;   
+    background-size : contain;
+    background-repeat: no-repeat;
+}
+.video1-section-h3{
+    font-size: 20px;
+    position : relative;
+    bottom : 220px;
+    left : 50px;
+    color : white;
+    font-weight: 350;
+}
+
+.hosting-start{
+    width : 150px;
+    height : 50px;
+    background-color: aquamarine;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 50px;
+    background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+    color : white;
+    margin : 50px;
+    
+}
+
+.move-down-btn{
+    width : 30px;
+    height : 30px;
+    background-color: black;
+    color : white;
+    font-size: 17px;
+    margin-top : 100px;
+    border : 0;
+    outline : 0;    
+    cursor: pointer;
+}
+
+.move-down-btn:hover{
+    background-color : #717171;
+    width : 30px;
+    height : 30px;
+    border-radius: 50%;
+}

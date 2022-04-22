@@ -18,15 +18,17 @@ body{
 .nav-section{
     z-index : 100;
     padding-top : 10px;
+    display : flex;
+    flex-direction: row;
     justify-content: space-between;
     height : 70px;
     width : 100%;
-    top : 0;
+    /* top : 0; */
     background-color: white;
 }
 
 
-.nav-section > i {
+.font-awsome-icon{
     padding-left : 50px;
     margin-top : 25px;
     font-size : 2.5rem;
@@ -512,7 +514,6 @@ body{
 .left-side-wrap-2{
     width : 50%;
     height : 100%;
-    background-color: #D70466;
 }
 
 .right-side-wrap-2{
@@ -605,7 +606,6 @@ body{
 .host-start{
     width : 150px;
     height : 50px;
-    background-color: aquamarine;
     text-align: center;
     border-radius: 10px;
     line-height: 50px;
