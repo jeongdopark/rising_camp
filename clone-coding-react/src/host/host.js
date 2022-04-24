@@ -4,33 +4,26 @@ import Link from '../main/link';
 import Video2 from './second-video.mp4'
 import './host.css';
 import FirstVideo from './first-video';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAirbnb } from "@fortawesome/free-brands-svg-icons";
+
+import NavSection from './nav';
 const Host = () => {
-    
+
     const [buttonState, setButtonState] = useState(false);
-    const onClickBtn = useCallback(() => {
+    const onClickBtn = useCallback((videoElement) => {
         if(buttonState === false){
             setButtonState(true)
-            
+            videoElement.current.pause()
         }else{
             setButtonState(false)
+            videoElement.current.play();
         }
     },[buttonState])
 
+    
     return(
         <div className="host-page-wrap">
-            <nav className="nav-section">
-                <FontAwesomeIcon className="font-awsome-icon" icon={faAirbnb} style={{fontSize:"40px"}}/>
-                <div className="host-imgs-wrap">
-                    <div className="host-imgs f"></div>
-                    <div className="host-imgs s"></div>
-                    <div className="host-imgs t"></div>
-                    <h3>슈퍼호스트에게 물어보기</h3>
-                </div>
-                <div className="host-start">호스팅 시작하기</div>
-            </nav>
-            <FirstVideo buttonState={buttonState} onClickBtn={onClickBtn}/>
+            <NavSection/>
+            <FirstVideo onClickBtn={onClickBtn} buttonState={buttonState}/>
             <div className="carousel-section-wrap">
                 <h1>언제 어디서든 <br/> 호스팅하실 수 있습니다</h1>
                 <div className="carousel-wrap">
@@ -128,15 +121,7 @@ const Host = () => {
                     <div className="right-side"></div>
                 </div>
             </div>
-            <nav className="nav-section2">
-                <div className="host-imgs-wrap2">
-                    <div className="host-imgs f"></div>
-                    <div className="host-imgs s"></div>
-                    <div className="host-imgs t"></div>
-                    <h3>슈퍼호스트에게 물어보기</h3>
-                </div>
-                <div className="host-start">호스팅 시작하기</div>
-            </nav>
+            <NavSection/>
             <div className="video2-section-wrap">
                 <div className="left-side-wrap-2">
                     <video className="second-video" autoPlay={true} muted={true} style={{width:'100%', height:'100%'}}>

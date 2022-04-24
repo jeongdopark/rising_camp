@@ -15,24 +15,6 @@ const Cards = ({prop}) => {
     )
 }
 
-// const Cards = ({cardsElement}) => {
-//     console.log(cardsElement[0].image);
-//     return(
-        
-//         <div className="city-wrap">
-//             {cardsElement.map(element => (
-//                 <div className="city-wrap-common">
-//                     <div className="city-img" style={{backgroundImage:`url(${element.image})`}}></div>
-//                     <div className="city-info" style={{backgroundColor:`${element.color}`}}>
-//                         <h1>{element.city}</h1>
-//                         <h3>{element.distance}</h3>
-//                     </div>
-                
-//                 </div>
-//             ))}
-//         </div>
-//     )
-// }
 
 export default Cards
 

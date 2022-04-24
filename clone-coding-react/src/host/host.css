@@ -16,19 +16,24 @@ body{
     display : flex;
 }
 .nav-section{
+    display : flex;
     z-index : 100;
     padding-top : 10px;
     justify-content: space-between;
+    align-items: center;
     height : 70px;
     width : 100%;
     top : 0;
     background-color: white;
 }
 
+.icon-wrap-first{
+    line-height : 70px;
+}
 
-.nav-section > i {
+.font-awsome-icon {
     padding-left : 50px;
-    margin-top : 25px;
+    margin-top : 20px;
     font-size : 2.5rem;
 }
 

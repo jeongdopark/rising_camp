@@ -8,6 +8,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import Image1 from '../images/incheon.webp'
 import Cards from './cards';
 const Main = () => {
 
@@ -21,7 +22,7 @@ const Main = () => {
         {
             city : 'incheon',
             color : '#CC2D4A',
-            "image" : '../images/incheon.webp',
+            image : Image1,
             distance : '29KM 거리'
         },
         {

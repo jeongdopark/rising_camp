@@ -5,6 +5,7 @@ import Host from './host/host';
 const App = () => {
     return(
         <Host></Host>
+        // <Main></Main>
     )
 }
 

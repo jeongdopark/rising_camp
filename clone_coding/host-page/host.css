@@ -15,11 +15,13 @@ body{
 .seen{
     display : flex;
 }
+
 .nav-section{
-    z-index : 100;
-    padding-top : 10px;
+    /* z-index : 100; */
+    /* padding-top : 10px; */
+    height : 500px;
     display : flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     height : 70px;
     width : 100%;
@@ -28,23 +30,23 @@ body{
 }
 
 
-.font-awsome-icon{
+/* .font-awsome-icon{
     padding-left : 50px;
     margin-top : 25px;
     font-size : 2.5rem;
-}
-
+} */
+/* 
 .host-start{
     width : 150px;
     height : 50px;
-    background-color: aquamarine;
     text-align: center;
     border-radius: 10px;
     line-height: 50px;
+    font-size : 3rem;
     background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
     color : white;
     margin-right : 50px;
-}
+} */
 
 
 
