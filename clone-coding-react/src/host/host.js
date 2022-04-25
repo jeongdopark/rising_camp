@@ -6,8 +6,9 @@ import './host.css';
 import FirstVideo from './first-video';
 
 import NavSection from './nav';
+import Carousel from './carousel';
 const Host = () => {
-
+    
     const [buttonState, setButtonState] = useState(false);
     const onClickBtn = useCallback((videoElement) => {
         if(buttonState === false){
@@ -26,67 +27,9 @@ const Host = () => {
             <FirstVideo onClickBtn={onClickBtn} buttonState={buttonState}/>
             <div className="carousel-section-wrap">
                 <h1>언제 어디서든 <br/> 호스팅하실 수 있습니다</h1>
-                <div className="carousel-wrap">
-                    <div className="carousel carousel-empty"></div>
-                    <div className="carousel">
-                        <div className="carousel-people img-2"></div>
-                        <div className="info-wrap">
-                            <p>스튜디오 호스팅 덕에 새로운 삶을 사는 <br/> 느낌이에요. 좋은 인연과 잊을 수 없는 <br/> 추억은 덤이죠.</p>
-                            <div className="name name-img-2"></div>
-                            <h3>밀라노의 호스트</h3>
-                        </div>
-                    </div>
-                    <div className="carousel">
-                        <div className="carousel-people img-3"></div>
-                        <div className="info-wrap">
-                            <p>집을 숙소로 호스팅하면서 자영업자가 <br/> 되어 경제적 자유에 한 걸음 더 <br/> 가까워질 수 있었어요.</p>
-                            <div className="name name-img-3"></div>
-                            <h3>애틀랜타의 호스트</h3>
-                        </div>
-                    </div>
-                    <div className="carousel">
-                        <div className="carousel-people img-4"></div>
-                        <div className="info-wrap">
-                            <p>파스타 만들기 체험을 호스팅함으로써 <br/> 문화 보존에 기여할 수 있습니다.</p>
-                            <div className="name name-img-4"></div>
-                            <h3>팔롬바라사비나의 호스트</h3>
-                        </div>
-                    </div>
-                    <div className="carousel">
-                        <div className="carousel-people img-5"></div>
-                        <div className="info-wrap">
-                            <p>에어비앤비 덕분에 제가 제일 좋아하는 <br/> 일을 업으로 삼을 수 있게 되었어요. <br/> 바로 집에서 게스트를 맞이하고 돌보는 <br/> 일이죠.</p>
-                            <div className="name name-img-5"></div>
-                            <h3>치앙마이의 호스트</h3>
-                        </div>
-                    </div>
-                    <div className="carousel">
-                        <div className="carousel-people img-6"></div>
-                        <div className="info-wrap">
-                            <p>베두인 텐트 호스팅을 통해 세계 <br/> 각지에서 온 분들을 만날 수 <br/> 있었습니다.</p>
-                            <div className="name name-img-6"></div>
-                            <h3>와디럼의 호스트</h3>
-                        </div>
-                    </div>
-                    <div className="carousel">
-                        <div className="carousel-people img-7"></div>
-                        <div className="info-wrap">
-                            <p>게스트가 소중한 사람들과 자연 속에서 <br/> 교감할 수 있도록 친환경 숙소를 <br/> 호스팅하는 게 참 보람 있어요.</p>
-                            <div className="name name-img-7"></div>
-                            <h3>파라치의 호스트</h3>
-                        </div>
-                    </div>
-                    <div className="carousel carousel-empty"></div>
-                </div>
-                <span className="btn-wrap">
-                    <button className="left-btn">
-                        <i className="fa-solid fa-angle-left"></i>
-                    </button>
-                    <button className="right-btn">
-                        <i className="fa-solid fa-angle-right"></i>
-                    </button>
-                </span>
+                <Carousel></Carousel>
             </div>
+
             <div className="question-section-wrap">
                 <div className="question">
                     <p>어떤 종류의 숙소인가요?</p>

@@ -8,37 +8,11 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import Image1 from '../images/incheon.webp'
-import Cards from './cards';
+import Card from './card';
+import Activity from './activity';
+
 const Main = () => {
 
-    const cardsElement = [
-        {
-            city : 'seoul',
-            color : '#bc1a6e',
-            image : '/images/seoul.webp',
-            distance : '2KM 거리'
-        },
-        {
-            city : 'incheon',
-            color : '#CC2D4A',
-            image : Image1,
-            distance : '29KM 거리'
-        },
-        {
-            city : 'daegu',
-            color : '#DE3151',
-            image : '/Users/mac/Desktop/FE-study/rising_camp/clone-coding-react/src/images/daegu.webp',
-            distance : '237KM 거리'
-        },
-        {
-            city : 'daejeon',
-            color : '#D93B30',
-            image : '../images/daejeon.webp',
-            distance : '140KM 거리'
-        }
-        
-    ]
     return(
         <div className="page-wrap">
             <div className="nav-wrap">
@@ -97,29 +71,6 @@ const Main = () => {
                     </div>
                 </nav> --> */}
             </div>
-            {/* <!-- <div className="white-nav-wrap">
-                <div className="white-nav-element1">
-                    <i className="fa-brands fa-airbnb fa-2xl"></i>
-                    <h1>airbnb</h1>
-                </div>
-                <div className="white-search-wrap">
-                    <div className="white-search">
-                        <h3>검색 시작하기</h3>
-                        <div className="search-numbers-icon2">
-                            <i className="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                    </div>
-                </div>
-                <div className="white-nav-element3">
-                    <a href="../host-page/host.html">호스트 되기</a>
-                    <i className="fa-solid fa-globe"></i>
-                    <div className="host-wrap2">
-                        <i className="fa-solid fa-bars"></i>
-                        <i className="fa-solid fa-user"></i>
-                    </div>
-                </div>
-            </div> --> */}
-
             {/* <!--우크라이나 ------------------------------------------------ --> */}
             <div className="uk-section-wrap">
                 <div className="uk-section">
@@ -136,30 +87,8 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            {/* <!--설레는 다음 여행을 위한 아이디어 ------------------------------------------------ --> */}
-            <div className="city-section-wrap">
-                <h1>설레는 다음 여행을 위한 아이디어</h1>
-                <div className="city-wrap">
-                    {cardsElement.map((prop) => (
-                        <Cards key={prop.city} prop={prop}/>
-                    ))}
-                </div>
-            </div>
-            {/* <!-- ------------------------------------------------ --> */}
-            <div className="activity-section-wrap">
-                <h1>에어비엔비 체험 둘러보기</h1>
-                <div className="activity-wrap">
-                    <div className="activity-common journey">
-                        <h1>여행 중 만나는 <br/> 이색적인 즐길 거리</h1>
-                        <div>체험</div>
-                    </div>
-                    <div className="activity-common home">
-                        <h1>집에서 만나는 <br/> 다양한 즐길 거리</h1>
-                        <div>온라인 체험</div>
-                    </div>
-                </div>
-            </div>
-            {/* <!-- ------------------------------------------------ --> */}
+            <Card></Card>
+            <Activity></Activity>
             <div className="question-section-wrap">
                 <div className="question-section">
                     <div className="span-wrap">
@@ -168,7 +97,6 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            {/* <!-- ------------------------------------------------ --> */}
             <Link></Link>
             <Footer></Footer>
         </div>
@@ -176,3 +104,5 @@ const Main = () => {
 }
 
 export default Main
+
+

@@ -1,9 +1,6 @@
 import React from 'react';
-import './cards.css';
-// import Image from '../images/seoul.webp';
-const Cards = ({prop}) => {
-    console.log(prop.image);
-    // const backgroundImageURL = "../images/seoul.webp"
+
+const CardElement = ({prop}) => {
     return(
         <div className="city-wrap-common">
             <div className="city-img" style={{backgroundImage:`url(${prop.image})`}}></div>
@@ -16,7 +13,7 @@ const Cards = ({prop}) => {
 }
 
 
-export default Cards
+export default CardElement
 
                 // <div className="city-wrap">
                 //     <div className="city-wrap-common">

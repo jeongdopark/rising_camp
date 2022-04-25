@@ -1,5 +1,5 @@
 import React from 'react';
-import './footer.css';
+import './main.css';
 const Footer = () => {
     return(
         <footer className="footer-section-wrap">
