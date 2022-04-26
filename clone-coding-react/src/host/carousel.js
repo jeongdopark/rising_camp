@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './host.css'
 
 
@@ -64,21 +64,39 @@ const Carousel = () => {
             valid : 6
         }
     ]
-    const [count, setCount] = useState(2);
+    
+    const [left, setLeft] = useState(-400);
+    let count = useRef(2);
+    let leftNum = useRef(-400)
+
+    const rightBtn = () => {
+        if(count.current < 6){
+            count.current += 1
+            leftNum.current -= 450;
+            setLeft(leftNum.current)
+        }
+    }
+    const leftBtn = () => {
+        if(count.current > 1){
+            count.current -= 1
+            leftNum.current += 450;
+            setLeft(leftNum.current)
+        }
+    }
     return ( 
             <>
-                <div className="carousel-wrap">
+                <div className="carousel-wrap" style={{left : `${left}px`}}>
                     <div className="carousel carousel-empty"></div>
                     {carouselObj.map((element) => (
-                        <CarouselElement element={element} count={count}></CarouselElement>
+                        <CarouselElement element={element} count={count.current}></CarouselElement>
                     ))}
                 </div>
             
                 <span className="btn-wrap">
-                    <button className="left-btn">
+                    <button className="left-btn" onClick={()=>leftBtn()}>
                         <FontAwesomeIcon icon={faAngleLeft}/>
                     </button>
-                    <button className="right-btn">
+                    <button className="right-btn" onClick={()=>rightBtn()}>
                         <FontAwesomeIcon icon={faAngleRight}/>
                     </button>
                 </span>

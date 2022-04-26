@@ -39,8 +39,8 @@ const Card = () => {
     return(
             <div className="city-section-wrap">
                 <h1>설레는 다음 여행을 위한 아이디어</h1>
-                <Calendar onChange={onChange} value={value} />
-                <Calendar onChange={onChange} value={value} />
+                {/* <Calendar onChange={onChange} value={value} />
+                <Calendar onChange={onChange} value={value} /> */}
                 <div className="city-wrap">
                     {cardsElement.map((prop) => (
                     <CardElement key={prop.city} prop={prop}/>

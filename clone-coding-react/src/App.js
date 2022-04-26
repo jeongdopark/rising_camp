@@ -4,8 +4,8 @@ import Main from './main/main.js';
 import Host from './host/host';
 const App = () => {
     return(
-        <Host></Host>
-        // <Main></Main>
+        // <Host></Host>
+        <Main></Main>
     )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from './footer';
 import Link from './link';
 import './main.css';
@@ -10,9 +10,18 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import Card from './card';
 import Activity from './activity';
-
+import MenuBar from './menubar';
+import LoginModalWrap from './login-modal';
 const Main = () => {
+    const [menuDisplay, setMenuDisplay] = useState(false)
 
+    const menuOnClick = () => {
+        if(menuDisplay === false){
+            setMenuDisplay(true)
+        }else{
+            setMenuDisplay(false)
+        }
+    }
     return(
         <div className="page-wrap">
             <div className="nav-wrap">
@@ -31,12 +40,14 @@ const Main = () => {
                         <div className="black-nav-element3">
                             <a href="../host-page/host.html">호스트 되기</a>
                             <FontAwesomeIcon icon={faGlobe}/>
-                            <div className="host-wrap">
+                            <div className="host-wrap" onClick={()=>menuOnClick()}>
                                 <FontAwesomeIcon className="host-wrap-icons" icon={faBars}/>
                                 <FontAwesomeIcon className="host-wrap-icons" icon={faUser}/>
+                                {menuDisplay === true ? <MenuBar></MenuBar> : ''}
                             </div>
                         </div>
                     </div>
+                    
                     <div className="black-nav-search-wrap">
                         <div className="search-location search-height">
                             <h1 className="search-font1">위치</h1>
@@ -71,6 +82,7 @@ const Main = () => {
                     </div>
                 </nav> --> */}
             </div>
+            <LoginModalWrap></LoginModalWrap>
             {/* <!--우크라이나 ------------------------------------------------ --> */}
             <div className="uk-section-wrap">
                 <div className="uk-section">
