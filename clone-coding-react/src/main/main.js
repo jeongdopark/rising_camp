@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from './footer';
 import Link from './link';
 import './main.css';
@@ -13,8 +13,9 @@ import Activity from './activity';
 import MenuBar from './menubar';
 import LoginModalWrap from './login-modal';
 const Main = () => {
-    const [menuDisplay, setMenuDisplay] = useState(false)
-
+    const [ menuDisplay, setMenuDisplay ] = useState(false);
+    const [ loginModal, setLoginModal ] = useState(false);
+   
     const menuOnClick = () => {
         if(menuDisplay === false){
             setMenuDisplay(true)
@@ -43,11 +44,15 @@ const Main = () => {
                             <div className="host-wrap" onClick={()=>menuOnClick()}>
                                 <FontAwesomeIcon className="host-wrap-icons" icon={faBars}/>
                                 <FontAwesomeIcon className="host-wrap-icons" icon={faUser}/>
-                                {menuDisplay === true ? <MenuBar></MenuBar> : ''}
+                                {menuDisplay === true ? <MenuBar setLoginModal={setLoginModal} loginModal={loginModal}></MenuBar> : ''}
                             </div>
                         </div>
                     </div>
-                    
+                    {
+                    loginModal === true ? 
+                    <LoginModalWrap setLoginModal={setLoginModal} loginModal={loginModal}></LoginModalWrap> : 
+                    null
+                    }
                     <div className="black-nav-search-wrap">
                         <div className="search-location search-height">
                             <h1 className="search-font1">위치</h1>
@@ -82,7 +87,7 @@ const Main = () => {
                     </div>
                 </nav> --> */}
             </div>
-            <LoginModalWrap></LoginModalWrap>
+            {/* <LoginModalWrap></LoginModalWrap> */}
             {/* <!--우크라이나 ------------------------------------------------ --> */}
             <div className="uk-section-wrap">
                 <div className="uk-section">
