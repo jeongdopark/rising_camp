@@ -9,9 +9,10 @@ import { faPause } from "@fortawesome/free-solid-svg-icons";
 const FirstVideo = ({ onClickBtn, buttonState }) => {
 
     const videoElement = useRef();
-    useEffect(() => {
-    }, [])
-
+    // useEffect(() => {
+        
+    // }, [])
+    // console.log(videoElement);
     const scrollTo = () => {
         window.scrollTo({top : 800, behavior : 'smooth'});
         console.log('scrollTo');

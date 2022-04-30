@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, A11y } from 'swiper';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,10 +10,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './list.css'
-import Image1 from '../images/incheon.webp'
-import Image2 from '../images/seoul.webp'
+
 const ListElement = ({element}) => {
-    console.log(element);
+    
     return(
             <>
                 <div class="house house-1">

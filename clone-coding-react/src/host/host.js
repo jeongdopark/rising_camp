@@ -1,6 +1,7 @@
 import React, {useCallback, useState, useRef} from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Footer from '../main/footer';
-import Link from '../main/link';
+import Links from '../main/link';
 import Video2 from './second-video.mp4'
 import './host.css';
 import FirstVideo from './first-video';
@@ -23,6 +24,7 @@ const Host = () => {
     
     return(
         <div className="host-page-wrap">
+            <Link to="/">홈</Link>
             <NavSection/>
             <FirstVideo onClickBtn={onClickBtn} buttonState={buttonState}/>
             <div className="carousel-section-wrap">
@@ -80,7 +82,7 @@ const Host = () => {
                     <div>시작하기</div>
                 </div>
             </div>
-            <Link/>
+            <Links/>
             <Footer/>
         </div>
     )

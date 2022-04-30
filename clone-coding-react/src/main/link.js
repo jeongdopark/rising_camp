@@ -1,7 +1,7 @@
 import React from 'react';
 import './link-element';
 import LinkElement from './link-element';
-const Link = () => {
+const Links = () => {
         const linkElements = [
             {
                 element : [ "도움말 센터", "안전 정보", "예약 취소 옵션", "장애인 지원", "이웃 민원 신고" ],
@@ -68,4 +68,4 @@ const Link = () => {
         )
 }
 
-export default Link;
+export default Links;

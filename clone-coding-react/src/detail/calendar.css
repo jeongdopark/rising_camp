@@ -1,0 +1,112 @@
+.rdrDefinedRangesWrapper{
+    display : none;
+}
+
+.rdrDateDisplayWrapper{
+    display : none;
+}
+.rdrMonthPicker > select{
+    display : none;   
+}
+
+.calendar-wrapper{
+    margin : 0 auto;
+    width : 60%;
+    border-radius: 30px;
+    height : 500px;
+    position : absolute;
+    left : 20%;
+    margin-top : 20px;
+    background-color: white;
+}
+
+.calendar-container{
+    margin : 0 auto;
+    width : 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.rdrMonthPicker{
+    position : relative;
+    left : -20%;
+    width : 40px;
+    height : 10px;
+    background-color: black;
+}
+
+.rdrYearPicker > select {
+    display : none;
+}
+
+.rdrYearPicker{
+    position : relative;
+    right : -20%;
+    width : 40px;
+    height : 10px;
+    background-color: black;
+}
+
+
+
+.rdrCalendarWrapper{
+    width : 90%;
+}
+
+.rdrMonths{
+    margin: 0 auto;
+}
+.rdrNextButton{
+    position : relative;
+    left : -17%;
+}
+.rdrPprevButton {
+    position : relative;
+    right : -17%;
+}
+
+.select-box{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width : 30%;
+    height : 50px;
+    border-radius: 20px;;
+    background-color: #F7F7F7;
+    margin : 0 auto;
+    margin-top : 40px;
+}
+.select-common{
+
+    width : 48%;
+    height : 40px;
+    border-radius: 20px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 700;
+    font-size : 15px;
+    cursor: pointer;
+}
+.select-one{
+    position: absolute;
+    left : 3px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 2px, rgb(0 0 0 / 5%) 0px 4px 12px !important;
+    background-color: white;
+}
+.select-two{
+    position: absolute;
+    right : 3px;
+}
+.select{
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 2px, rgb(0 0 0 / 30%) 0px 4px 12px !important;
+    background-color: white;
+}
+
+.rdrDateRangePickerWrapper{
+    width : 90%;
+    justify-content: center;
+    margin-top : 30px;
+}

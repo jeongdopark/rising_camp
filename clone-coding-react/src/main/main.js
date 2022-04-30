@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Footer from './footer';
-import Link from './link';
+import Links from './link';
 import './main.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAirbnb } from "@fortawesome/free-brands-svg-icons";
@@ -12,10 +13,16 @@ import Card from './card';
 import Activity from './activity';
 import MenuBar from './menubar';
 import LoginModalWrap from './login-modal';
+import Search from './search.js'
 const Main = () => {
     const [ menuDisplay, setMenuDisplay ] = useState(false);
     const [ loginModal, setLoginModal ] = useState(false);
-   
+    const [clickOne, setClickOne] = useState(false)
+    const [clickTwo, setClickTwo] = useState(false)
+    const [clickThree, setClickThree] = useState(false)
+    const [clickFour, setClickFour] = useState(false)
+
+
     const menuOnClick = () => {
         if(menuDisplay === false){
             setMenuDisplay(true)
@@ -23,6 +30,7 @@ const Main = () => {
             setMenuDisplay(false)
         }
     }
+
     return(
         <div className="page-wrap">
             <div className="nav-wrap">
@@ -39,7 +47,7 @@ const Main = () => {
                             <h3>온라인 체험</h3>
                         </div>
                         <div className="black-nav-element3">
-                            <a href="../host-page/host.html">호스트 되기</a>
+                            <Link to="/Host">호스트 되기</Link>
                             <FontAwesomeIcon icon={faGlobe}/>
                             <div className="host-wrap" onClick={()=>menuOnClick()}>
                                 <FontAwesomeIcon className="host-wrap-icons" icon={faBars}/>
@@ -53,32 +61,11 @@ const Main = () => {
                     <LoginModalWrap setLoginModal={setLoginModal} loginModal={loginModal}></LoginModalWrap> : 
                     null
                     }
-                    <div className="black-nav-search-wrap">
-                        <div className="search-location search-height">
-                            <h1 className="search-font1">위치</h1>
-                            <h2 className="search-font2">어디로 여행가세요?</h2>
-                        </div>
-                        <div className="search-line"></div>
-                        <div className="search-checkin search-height">
-                            <h1 className="search-font1">체크인</h1>
-                            <h2 className="search-font2">날짜 입력</h2>
-                        </div>
-                        <div className="search-line"></div>
-                        <div className="search-checkout search-height">
-                            <h1 className="search-font1">체크 아웃</h1>
-                            <h2 className="search-font2">날짜 입력</h2>
-                        </div>
-                        <div className="search-line"></div>
-                        <div className="search-numbers search-height">
-                            <div className="search-numbers-h-wrap">
-                                <h1 className="search-font1">인원</h1>
-                                <h2 className="search-font2">게스트 추가</h2>
-                            </div>
-                            <div className="search-numbers-icon">
-                                <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                            </div>
-                        </div>
-                    </div>    
+                    <Search 
+                    clickOne={clickOne} setClickOne={setClickOne} setClickTwo={setClickTwo} 
+                    clickTwo={clickTwo} setClickThree={setClickThree} clickThree={clickThree} 
+                    clickFour={clickFour} setClickFour={setClickFour}>
+                    </Search>
                 </nav>
                 {/* <!-- <nav className="white-nav">
                     <div className="black-nav-element1">
@@ -100,7 +87,7 @@ const Main = () => {
                 <div className="search-section-img-wrap">
                     <div className="search-section-img">
                         <h1>호기심을 자극하는 숙소로 떠나보세요</h1>
-                        <a href="../grid-page/grid.html">유연한 검색</a>
+                        <Link to="/List">유연한 검색</Link>
                     </div>
                 </div>
             </div>
@@ -114,8 +101,9 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <Link></Link>
+            <Links></Links>
             <Footer></Footer>
+            
         </div>
     )
 }
