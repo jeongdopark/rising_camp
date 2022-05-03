@@ -1,0 +1,163 @@
+/* 
+.login-greeting2{
+    padding-top : 30px;
+    font-size : 1.5rem;
+    font-weight : 600;
+    margin-top : 40px;
+    border-top : 1px solid #DDDDDD;
+}
+
+
+.login-section-line{
+    display: flex;
+    flex: row;
+    width : 100%;
+}
+
+.line-div{
+    display: block;
+    width: 45%;
+    height: 10px;
+    background-color: black;
+}
+
+
+.line-div-wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+
+
+.login-app{
+    width : 100%;
+    height : 8rem;
+    margin-top : 1rem;   
+}
+
+.login-logo-top{
+    display: flex;
+    width : 100%;
+    height : 3rem;
+    justify-content: space-between;
+}
+
+.login-logo-top > div {
+    display: flex;
+    align-items: center;
+    border : 1px solid black;
+}
+
+.login-logo-bottom{
+    position : relative;
+    display: flex;
+    align-items: center;
+    width : 100%;
+    height : 4rem;
+    border : 1px solid black;
+    margin-top : 1rem;
+    border-radius: 10px;
+}
+
+.login-logo-bottom > div {
+    position : absolute;
+    left : 20px;
+}
+
+.login-logo-bottom > h3{
+    margin-left : 200px;
+    font-size: 1rem;
+}
+
+
+.login-logo-top > div{
+    width : 32%;
+    height : 100%;
+    border-radius: 10px;
+}
+
+.logo{
+    margin : 0 auto;
+    width : 25px;
+    height : 25px;
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.main-right-section{
+    border : 1px solid black;
+}
+
+.main-right-container{
+    width : 85%;
+    margin-left : 3rem;
+    border-radius: 10px;
+    background-color: darkcyan;
+}
+
+.top-info-img{
+    background-size : cover;
+    background-repeat: no-repeat;
+    width : 150px;
+    height : 110px;
+    border-radius: 10px;
+}
+
+.top-info{
+    display : flex;
+    margin : 20px;
+}
+
+.main-right-container{
+    border : 1px solid black;
+    background-color: beige;
+}
+
+.top-info-text-container > h3{
+    width : 80%;
+    font-size : 13px;
+}
+
+.top-info-text-container > h4{
+    font-size : 13px;
+    color : #717171;
+}
+
+.top-info-text-container{
+    margin-left : 10px;
+}
+
+.mini-container{
+    display : flex;
+    font-size : 10px;  
+    margin-top : 45px; 
+    align-items: center;
+}
+
+.mini-container > h4{
+    color : #717171;
+}
+
+.charge-info{
+    margin : 20px;
+    padding : 20px 0 20px 0;
+    border-top : 1px solid #717171;
+    border-bottom : 1px solid #717171;
+}
+
+.charge-info > h2{
+    font-size : 1.4rem;
+    margin-bottom : 20px;
+}
+
+.charge-common{
+    display: flex;
+    justify-content: space-between;
+    margin : 5px 0 5px 0;
+    font-size : 15px;
+    font-weight: 400;
+}
+
+.total-charge{
+    margin : 20px;
+}

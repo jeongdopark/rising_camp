@@ -66,9 +66,13 @@ const LoginModalWrap = ({loginModal, setLoginModal}) => {
                                 <div className="continue">계속</div>
                             </div>
                             <div className="login-section-line">
-                                <div className="line-div"></div>
+                                <div className="line-div-wrap">
+                                    <div className="line-div"></div>
+                                </div>
                                 <div className="text">또는</div>
-                                <div className="line-div"></div>
+                                <div className="line-div-wrap">
+                                    <div className="line-div"></div>
+                                </div>
                             </div>
                             <div className="login-app">
                                 {appInfo.map((element) => (<LoginApp element={element}></LoginApp>))}

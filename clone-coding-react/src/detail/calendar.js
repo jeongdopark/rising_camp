@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './calendar.css'
+import 'react-dates/initialize';
 import moment from "moment"
 import "moment/locale/ko"
 import 'react-date-range/dist/styles.css'; // main css file
@@ -17,7 +18,9 @@ const Calendar = () => {
           key: 'selection'
         }
       ])
-    
+    useEffect(() => {
+        moment.locale('ko');
+    })
     return(
         <div className="calendar-wrapper">
             <div className="calendar-container">

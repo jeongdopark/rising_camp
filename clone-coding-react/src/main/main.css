@@ -905,10 +905,16 @@
     flex: row;
     width : 100%;
     align-items: center;
+    justify-content: space-between;
+}
+
+.line-div-wrap{
+    width : 47%;
+    height : 10px;
 }
 
 .text{
-    margin : 0 5px 0 5px;
+    margin-top : 10px;
     font-size: 11px;
     color : #484848;
     
@@ -916,7 +922,8 @@
 .line-div{
     position : relative;
     display: block;
-    width: 45%;
+    width: 99%;
+    margin : 0 auto;
     height: 1px;
     background-color: rgb(221, 221, 221);
     top : 10px;
@@ -997,7 +1004,7 @@
 }
 
 .location-sub-link{
-    text-decoration: none;
+text-decoration: none;
 }
 /* -------------------------------------------------------- */
 

@@ -5,17 +5,18 @@ import Main from './main/main.js';
 import Host from './host/host';
 import List from './list/list';
 import Calendar from './detail/calendar';
+import Reserve from './reserve/reserve';
 // import Test from './test.js'
 const App = () => {
     return(
-        <Router>
-            <Routes>
-                <Route path="/" element={<Main/>}/>
-                <Route path="/host" element={<Host/>}/>
-                <Route path="/list" element={<List/>}/>
-            </Routes>
-        </Router>
-        // <Test></Test>
+        // <Router>
+        //     <Routes>
+        //         <Route path="/" element={<Main/>}/>
+        //         <Route path="/host" element={<Host/>}/>
+        //         <Route path="/list" element={<List/>}/>
+        //     </Routes>
+        // </Router>
+        <Reserve></Reserve>
     )
 }
 
