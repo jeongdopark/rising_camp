@@ -1,5 +1,86 @@
-.container{
+
+
+
+.calendar{
+    width : 250px;
+    height : 250px;
+    border-spacing: 30px;
+    border-collapse: separate
+}
+
+.calendar > tbody{
+    height : 100%;
+}
+
+.week-array > td{
+    text-align: center;
+    cursor: pointer;
+}
+
+.row {
+    display : flex;
+    justify-content: center;
+}
+
+.box {
+    margin : 5px 19px 5px 19px;
+    
+}
+.text{
+    font-size : 14px;;
+    font-weight: 500;
+    color : #222222;
+}
+
+.day{
+    font-weight: 600;
+}
+
+.calendar-section{
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    margin : 0 auto;
     position : absolute;
-    right : 0;
-    top : 200px;
+    top : 100px;
+}
+
+.calendar-icon-wrapper{
+    margin-top : 10px;
+}
+
+
+.calendar-icon-wrapper-left{
+    cursor: pointer;
+    position : relative;
+    top : 5px;
+    left : 30px;
+}
+
+.calendar-icon-wrapper-right{
+    cursor: pointer;
+    position : relative;
+    top : 5px;
+    right : 30px;
+}
+
+
+.calendar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width : 100%;
+}
+
+.leftCalendar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right : 30px;
+
+}
+
+.control {
+    display: flex;
+    justify-content: center;
 }

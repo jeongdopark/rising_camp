@@ -8,7 +8,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
 import { addDays } from 'date-fns';
 import { useState } from 'react';
-
+import CalendarTest from '../calendarTest.js';
 
 const Calendar = () => {
     const [state, setState] = useState([
@@ -28,14 +28,7 @@ const Calendar = () => {
                     <div className="select-common select-one">달력</div>
                     <div className="select-common select-two">유연한 일정</div>
                 </div>
-                <DateRangePicker
-                    onChange={item => setState([item.selection])}
-                    showSelectionPreview={true}
-                    moveRangeOnFirstSelection={false}
-                    months={2}
-                    ranges={state}
-                    direction="horizontal"
-                />
+                <CalendarTest/>
             </div>
         </div>
     )

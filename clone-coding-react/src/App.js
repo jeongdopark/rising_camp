@@ -6,7 +6,10 @@ import Host from './host/host';
 import List from './list/list';
 import Calendar from './detail/calendar';
 import Reserve from './reserve/reserve';
-// import Test from './test.js'
+
+import Test from './test.js'
+import CalendarTest from './calendarTest';
+import RoomInfo from './roominfo/roomInfo';
 const App = () => {
     return(
         // <Router>
@@ -16,7 +19,8 @@ const App = () => {
         //         <Route path="/list" element={<List/>}/>
         //     </Routes>
         // </Router>
-        <Reserve></Reserve>
+        <RoomInfo></RoomInfo>
+
     )
 }
 

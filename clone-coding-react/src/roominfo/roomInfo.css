@@ -1,0 +1,309 @@
+
+*{
+    margin : 0 ;
+    padding : 0;
+}
+
+.roomInfo-nav-section{
+    width : 100%;
+    border-bottom : 1px solid #EBEBEB;
+}
+
+.roomInfo-nav-container{
+    display : flex;
+    flex-direction: row;
+    width : 78%;
+    margin : 0 auto;
+    height : 85px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roomInfo-nav-icon{
+    display : flex;
+    align-items: center;
+}
+
+.roomInfo-search-container{
+    display : flex;
+    align-items: center;
+    width : 300px;
+    height : 50px;
+    justify-content: space-between;
+    border-radius: 25px;
+    box-shadow: rgb(0 0 0 / 13%) 0px 1px 2px, rgb(0 0 0 / 13%) 0px 4px 12px !important;
+}
+
+.roomInfo-search-container > div{
+    margin-left : 20px;
+    font-weight: 500;
+    font-size : 15px;
+}
+
+.magnify-wrap{
+    width : 35px;
+    height : 35px;
+    background-color: #FF385C;
+    border-radius: 50%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-right : 10px;
+}
+
+.menu-container{
+    width : 200px;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-array{
+    display: flex;
+    align-items: center;
+    position : relative;
+    top : -5px;
+}
+
+.host-wrap-container{
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    width : 70px;
+    border : 1px solid #DDDDDD;
+    height : 40px;
+    border-radius: 20px;;
+}
+
+.roomInfo-title-section{
+    width : 100%;
+    margin-top : 20px;
+}
+
+.roomInfo-title-container{
+    width : 78%;
+    display : flex;
+    flex-direction: column;
+    margin : 0 auto;
+}
+
+.roomInfo-title-container > h1{
+    font-size : 1.5rem;
+}
+
+.roomInfo-tag-container{
+    margin-top : 10px;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tag-right-container, .tag-right{
+    display: flex;
+    flex-direction: row;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.tag-right > div{
+    margin : 0 10px 0 10px;
+    text-decoration: underline;
+    font-size : 15px;
+}
+
+.roomInfo-image-section{
+    width : 100%;
+    height : 400px;
+    margin-top : 20px;
+}
+
+.roomInfo-image-container{
+    width : 78%;
+    height : 100%;
+
+    margin : 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.roomInfo-image-left-section{
+    width : 50%;
+    height: 100%;
+    background-color: azure;
+    border-radius: 10px 0 0 10px;
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.roomInfo-image-right-section{
+    width : 49%;
+    height : 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image-container{
+    width : 49.5%;
+    height : 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image-box{
+    width : 99%;
+    height : 49%;
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.border-one{
+    border-radius: 0 10px 0 0;
+}
+
+.border-two{
+    border-radius: 0 0 10px 0;
+}
+
+.roomInfo-middle-section{
+    width : 100%;
+    height : 2000px;
+    margin-top : 50px;
+}
+
+.roomInfo-middle-container{
+    width : 78%;
+    height : 100%;
+    margin : 0 auto;
+}
+
+.roomInfo-middle-left-container{
+    width : 59%;
+    height : 100%;
+}
+
+.roomInfo-middle-right-container{
+    width : 41%;
+    height : 100%;
+}
+
+.roomInfo-host-img{
+    background-size : cover;
+    background-repeat: no-repeat;
+    width : 60px;
+    height : 60px;
+    border-radius: 50%;
+}
+
+.roomInfo-host-text{
+    display: flex;
+    flex-direction: column;    
+}
+
+.roomInfo-host-text > span{
+    margin-top : 10px;
+}
+
+.roomInfo-host-text > h3{
+    font-size : 21px;
+}
+
+.roomInfo-host-section{
+    display: flex;
+    height : 80px;
+    justify-content: space-between;
+    border-bottom : 1px solid #EBEBEB;
+}
+
+.svg-section-wrap{
+    display: flex;
+    margin-top : 25px;
+}
+
+.svg-section-text-container{
+    margin-left : 25px;
+}
+
+.svg-section-text-container > span{
+    margin-top : 5px;
+    color : #717171;
+    font-size : 14px;
+}
+
+.svg-section-text-container > div{
+    font-size : 17px;
+    font-weight: 500;
+}
+
+.roomInfo-svg-section{
+    margin-top : 30px;
+    border-bottom : 1px solid #EBEBEB;
+    height : 180px;
+}
+
+.roomInfo-detail-section{
+    width : 100%;
+    height : 230px;
+    border-bottom : 1px solid #EBEBEB;
+    margin-top : 30px;
+}
+
+.roomInfo-detail-section > div{
+    margin-bottom : 30px;
+}
+
+.roomInfo-detail-section > ul > li {
+    list-style: none;
+    margin-bottom : 2px;
+}
+
+.roomInfo-detail-more-wrap{
+    margin-top : 20px;
+    display: flex;
+    align-items: center;
+}
+.roomInfo-detail-more-wrap > h2{
+    font-size : 18px;
+    text-decoration: underline;
+    margin-right : 10px;
+}
+
+.roomInfo-bedding-section{
+    width : 100%;
+    margin-top : 50px;
+    margin-bottom : 20px;
+}
+
+.bedding-wrap{
+    width : 26%;
+    height : 170px;
+    border : 1px solid #DDDDDD;
+    border-radius: 10px;
+    padding : 25px;
+
+}
+
+.bedding-wrap > div:not(:last-child) {
+    width : 100%;
+    margin-top : 10px;
+}
+
+.bedding-wrap > div:last-child{
+    width : 80%;
+    margin-top : 10px;
+}
+
+.host-wrap-icons{
+    margin : 5px;
+    font-size : 20px;
+}
+
+.roomInfo-bedding-container > h2{
+    margin-bottom : 20px;
+}
+

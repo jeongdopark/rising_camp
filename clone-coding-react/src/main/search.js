@@ -6,6 +6,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import Calendar from '../detail/calendar.js';
+import Test from '../test';
 const Search = ({clickOne, clickTwo, clickThree, clickFour, setClickOne, setClickTwo, setClickThree, setClickFour}) => {
     const clickLocation = useCallback(() => {
         if(clickOne === true){

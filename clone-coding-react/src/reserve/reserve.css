@@ -84,15 +84,14 @@
     background-repeat: no-repeat;
 }
 
-.main-right-section{
-    border : 1px solid black;
-}
+/* 식 */
 
 .main-right-container{
+    position: sticky;
+    top: 4rem;
     width : 85%;
     margin-left : 3rem;
     border-radius: 10px;
-    background-color: darkcyan;
 }
 
 .top-info-img{
@@ -109,8 +108,8 @@
 }
 
 .main-right-container{
-    border : 1px solid black;
-    background-color: beige;
+    border : 1px solid #DDDDDD;
+
 }
 
 .top-info-text-container > h3{
@@ -140,9 +139,9 @@
 
 .charge-info{
     margin : 20px;
-    padding : 20px 0 20px 0;
-    border-top : 1px solid #717171;
-    border-bottom : 1px solid #717171;
+    padding : 20px 0 10px 0;
+    border-top : 1px solid #DDDDDD;
+    border-bottom : 1px solid #DDDDDD;
 }
 
 .charge-info > h2{
@@ -153,11 +152,30 @@
 .charge-common{
     display: flex;
     justify-content: space-between;
-    margin : 5px 0 5px 0;
+    margin : 0 0 15px 0;
     font-size : 15px;
     font-weight: 400;
+
 }
 
 .total-charge{
     margin : 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-charge > div {
+    display: flex;
+}
+
+.total-charge > div > h2{
+    font-size : 1rem;
+}
+
+.total-charge > h2, h3{
+    font-size : 1rem;
+}
+
+.under-line{
+    text-decoration: underline;
 }
