@@ -10,6 +10,7 @@ import Reserve from './reserve/reserve';
 import Test from './test.js'
 import CalendarTest from './calendarTest';
 import RoomInfo from './roominfo/roomInfo';
+import GoogleMapTest from './googleMap';
 const App = () => {
     return(
         // <Router>
@@ -20,6 +21,7 @@ const App = () => {
         //     </Routes>
         // </Router>
         <RoomInfo></RoomInfo>
+        // <GoogleMapTest></GoogleMapTest>
 
     )
 }

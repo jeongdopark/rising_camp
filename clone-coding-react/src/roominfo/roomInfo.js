@@ -13,7 +13,9 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faBed } from "@fortawesome/free-solid-svg-icons";
 import { faMattressPillow } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
+import InfoCalendar from './info-calendar';
 
 import Image1 from '../images/info1.jpeg'
 import Image2 from '../images/info2.jpeg'
@@ -22,9 +24,26 @@ import Image4 from '../images/info4.jpeg'
 import Image5 from '../images/info5.jpeg'
 import Image6 from '../images/roomInfo.jpeg'
 
+import bed from '../images/bed.png'
+import elevator from '../images/elevator.png'
+import bedding from '../images/bedding.png'
+import refriger from '../images/refrigerator.png'
+import snow from '../images/snowflake.png'
+import tableware from '../images/tableware.png'
+import tv from '../images/television.png'
+import washer from '../images/washer.png'
+import wifi from '../images/wifi.png'
+import work from '../images/work-space.png'
+import hair from '../images/hair-dryer.png'
+import micro from '../images/microwave.png'
+import keyboard from '../images/keyboard.png'
+import review1 from '../images/review1.jpg'
+import review2 from '../images/review2.jpg'
+
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import MenuBar from '../main/menubar';
 import './roomInfo.css';
+import GoogleMapTest from '../googleMap';
 const RoomInfo = () => {
     const [ menuDisplay, setMenuDisplay ] = useState(false);
     const [ loginModal, setLoginModal ] = useState(false);
@@ -106,7 +125,7 @@ const RoomInfo = () => {
                                 <span>최대 인원 5명침실 1개침대 2개욕실 1개</span>
                             </div>
                             <div className="roomInfo-host-img-wrap">
-                                <div className="roomInfo-host-img" style={{backgroundImage:`url(${Image6})`}}></div>
+                                <div className="round-img" style={{backgroundImage:`url(${Image6})`}}></div>
                             </div>
                         </div>
 
@@ -141,8 +160,8 @@ const RoomInfo = () => {
                                 <li>- Free Wi-fi</li>
                                 <li>- 스마트 TV, NETFLIX 가능</li>
                             </ul>
-                            <div className="roomInfo-detail-more-wrap">
-                                <h2>더 보기</h2>
+                            <div className="more-wrap">
+                                <h2 className="more-info">더 보기</h2>
                                 <FontAwesomeIcon icon={faAngleRight}/>
                             </div>
                         </div>
@@ -151,21 +170,136 @@ const RoomInfo = () => {
                             <div className="roomInfo-bedding-container">
                                 <h2>숙박 장소</h2>
                                 <div className="bedding-wrap">
-                                    <div>
-                                        <FontAwesomeIcon className="host-wrap-icons" icon={faBed}/>
-                                        <FontAwesomeIcon className="host-wrap-icons" icon={faBed}/>
-                                        <FontAwesomeIcon className="host-wrap-icons" icon={faMattressPillow}/>
-                                        <FontAwesomeIcon className="host-wrap-icons" icon={faMattressPillow}/>
-                                        <FontAwesomeIcon className="host-wrap-icons" icon={faMattressPillow}/>
+                                    <div className="bedding-img-container">
+                                        {/* <FontAwesomeIcon className="host-wrap-icons" icon={faBed}/> */}
+                                        <div className="bedding-img" style={{backgroundImage:`url(${bed})`, width:"25px",height:"25px"}}></div>
+                                        <div className="bedding-img" style={{backgroundImage:`url(${bed})`, width:"25px",height:"25px", marginLeft:"7px"}}></div>
+                                        <div className="bedding-img" style={{backgroundImage:`url(${bedding})`, width:"25px",height:"25px", marginLeft:"7px"}}></div>
+                                        <div className="bedding-img" style={{backgroundImage:`url(${bedding})`, width:"25px",height:"25px", marginLeft:"7px"}}></div>
+                                        <div className="bedding-img" style={{backgroundImage:`url(${bedding})`, width:"25px",height:"25px"}}></div>
                                     </div>
-                                    <div>침실</div>
+                                    <div style={{fontWeight:"600", marginTop:"10px"}}>침실</div>
                                     <div>더블 침대 2개, 요와 이불 3개</div>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
+                            <div className="roomInfo-facilities-container">
+                                <div style={{fontSize:"22px", fontWeight:"600"}}>숙소 편의시설</div>
+                                    <div className="facilities-icon-container">
+                                        <div className="facilities-icon">
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${tableware})`}}></div>
+                                                <span>주방</span>
+                                            </div>
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${work})`}}></div>
+                                                <span>업무 전용 공간</span>
+                                            </div>
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${elevator})`}}></div>
+                                                <span>엘리베이터</span>
+                                            </div>
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${snow})`}}></div>
+                                                <span>에어컨</span>
+                                            </div>
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${refriger})`}}></div>
+                                                <span>냉장고</span>
+                                            </div>
+                                        </div>
+                                        <div className="facilities-icon">
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${wifi})`}}></div>
+                                                <span>무선 인터넷</span>
+                                            </div>
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${tv})`}}></div>
+                                                <span>TV</span>
+                                            </div>
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${washer})`}}></div>
+                                                <span>세탁기</span>
+                                            </div>
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${hair})`}}></div>
+                                                <span>헤어드라이어</span>
+                                            </div>
+                                            <div className="roomInfo-icon-wrap">
+                                                <div style={{backgroundImage:`url(${micro})`}}></div>
+                                                <span>전자레인지</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="show-all-facilities">편의시설 47개 모두 보기</div>
+                                </div>
+                                <div className="roomInfo-calendar-section">
+                                    <div className="roomInfo-calendar-container">
+                                        <div className="check-in-text">체크인 날짜를 선택해주세요.</div>
+                                        <span>여행 날짜를 입력하여 정확한 요금을 확인하세요.</span>
+                                        <div className="roomInfo-calendar-wrap">
+                                            <InfoCalendar></InfoCalendar>
+                                        </div>
+                                    </div>
+                                    <div className="roomInfo-calendar-bottom">
+                                        <div className="calendar-bottom-img" style={{backgroundImage:`url(${keyboard})`}}></div>
+                                        <div className="date-remove">날짜 지우기</div> 
+                                    </div>
+                                </div>
+                            </div>
                     <div className="roomInfo-middle-right-container"></div>
+                    <div className="roomInfo-review-section">
+                        <div className="roomInfo-review-container">
+                            <div className="review-title-container">
+                                <FontAwesomeIcon icon={faStar} style={{fontSize:"15px", color:"#FF5A5F"}}/>
+                                <div className="review-title-text">후기 2개</div>
+                            </div>
+                            <div className="Info-review-container">
+                                <div className="roomInfo-review-wrap">
+                                    <div className="roomInfo-user-info">
+                                        <div className="round-img" style={{backgroundImage:`url(${review1})`}}></div>
+                                        <div className="roomInfo-name-date">
+                                            <div className="roomInfo-review-name">애드박</div>
+                                            <div className="roomInfo-review-date">2022년 5월</div>
+                                        </div>
+                                    </div>
+                                    <div className="roomInfo-review-text">
+                                        따뜻한 물도 넘 잘나오고 시설도 깔끔하구
+                                        조명이 완전 감성적이에요!! ㅎㅎ
+                                        침대도 너무 편해서 친구도 저도 꿀잠 잤습니당ㅎㅎㅎ
+                                    </div>
+                                    <div className="more-wrap">
+                                        <h2 className="more-info">더 보기</h2>
+                                        <FontAwesomeIcon icon={faAngleRight}/>
+                                    </div>
+                                </div>
+                                
+                                <div className="roomInfo-review-wrap">
+                                    <div className="roomInfo-user-info">
+                                        <div className="round-img" style={{backgroundImage:`url(${review2})`}}></div>
+                                        <div className="roomInfo-name-date">
+                                            <div className="roomInfo-review-name">Myyah</div>
+                                            <div className="roomInfo-review-date">2022년 5월</div>
+                                        </div>
+                                    </div>
+                                    <div className="roomInfo-review-text">
+                                        nice place. This is my 2 time staying at this Airbnb and it’s nice !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="roomInfo-hosting-location-section">
+                        <div className="roomInfo-hosting-title">호스팅 지역</div>
+                        <div className="roomInfo-address">강남구, 서울, 한국</div>
+                        <div className="roomInfo-google-map">
+                            <GoogleMapTest></GoogleMapTest>
+                        </div>
+                    </div>
+
+                    <div className=""
                 </div>
             </div>
             
