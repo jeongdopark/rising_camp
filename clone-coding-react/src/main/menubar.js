@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LoginModalWrap from './login-modal';
 import './main.css';
 import MenuBarElement from './menubar-element';
-const MenuBar = ({loginModal, setLoginModal}) => {
+const MenuBar = ({loginModal, setLoginModal, emailModal, setEmailModal}) => {
     // useEffect(() => {
     //     // console.log(loginModal)
     // }, [loginModal])
@@ -67,7 +67,9 @@ const MenuBar = ({loginModal, setLoginModal}) => {
         <>
             <div className="menubar-wrap">
                 {menuElement.map((element) => (
-                    <MenuBarElement element={element} setLoginModal={setLoginModal} loginModal={loginModal}></MenuBarElement>
+                    <MenuBarElement element={element} setLoginModal={setLoginModal} loginModal={loginModal}
+                    setEmailModal={setEmailModal} emailModal={emailModal}
+                    ></MenuBarElement>
                 ))}
                 
             </div>

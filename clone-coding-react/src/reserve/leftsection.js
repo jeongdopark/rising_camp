@@ -5,7 +5,7 @@ import googleIcon from '../images/google.svg'
 import appleIcon from '../images/apple.svg'
 import mailIcon from '../images/mail.svg'
 import facebookIcon from '../images/facebook.svg'
-
+import './reserve.css'
 
 const ReserveLeftSection = () => {
     return(
@@ -77,13 +77,13 @@ const ReserveLeftSection = () => {
                                 <span>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</span>
                                 <div className="continue">계속</div>
                             </div>
-                            <div className="login-section-line">
-                                <div className="line-div-wrap">
-                                    <div className="line-div"></div>
+                            <div className="reserve-login-section-line">
+                                <div className="reserve-line-div-wrap">
+                                    <div className="reserve-line-div"></div>
                                 </div>
                                 <div className="text">또는</div>
-                                <div className="line-div-wrap">
-                                    <div className="line-div"></div>
+                                <div className="reserve-line-div-wrap" style={{justifyContent:"right"}}>
+                                    <div className="reserve-line-div"></div>
                                 </div>
                             </div>
                             <div className="login-app">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import ReactDOM from "react-dom/client";
 import Footer from './footer';
 import Links from './link';
 import './main.css';
@@ -14,14 +15,26 @@ import Activity from './activity';
 import MenuBar from './menubar';
 import LoginModalWrap from './login-modal';
 import Search from './search.js'
+import EmailModal from './email-modal';
+import PasswordModal from './password-modal';
+import SignupModal from './signup';
 const Main = () => {
     const [ menuDisplay, setMenuDisplay ] = useState(false);
+
+
     const [ loginModal, setLoginModal ] = useState(false);
+    const [ emailModal, setEmailModal ] = useState(false);
+    const [ userEmail, setUserEmail ] = useState('')
+    const [ userPassword, setUserPassword ] = useState('')
+    const [ correctEmail, setCorrectEmail ] = useState(false)
+    const [ signup, setSignup ] = useState(false)
+    const [ correctPassword, SetcorrectPassword ] = useState(true)
+
     const [clickOne, setClickOne] = useState(false)
     const [clickTwo, setClickTwo] = useState(false)
     const [clickThree, setClickThree] = useState(false)
     const [clickFour, setClickFour] = useState(false)
-
+    const [ validEmail, setValidEmail ] = useState(false)
 
     const menuOnClick = () => {
         if(menuDisplay === false){
@@ -41,25 +54,57 @@ const Main = () => {
                             <FontAwesomeIcon icon={faAirbnb} style={{fontSize:"40px"}}/>
                             <h1>airbnb</h1>
                         </div>
-                        <div className="black-nav-element2">
-                            <h3>숙소</h3>
-                            <h3>체험</h3>
-                            <h3>온라인 체험</h3>
+                        <div className="main-black-nav-element2">
+                            <h3 className="main-black-nav-text">숙소</h3>
+                            <h3 className="main-black-nav-text">체험</h3>
+                            <h3 className="main-black-nav-text">온라인 체험</h3>
                         </div>
                         <div className="black-nav-element3">
-                            <Link to="/Host">호스트 되기</Link>
+                            <div>호스트 되기</div>
                             <FontAwesomeIcon icon={faGlobe}/>
-                            <div className="host-wrap" onClick={()=>menuOnClick()}>
+                            <div className="mainpage-host-wrap" onClick={()=>menuOnClick()}>
                                 <FontAwesomeIcon className="host-wrap-icons" icon={faBars}/>
                                 <FontAwesomeIcon className="host-wrap-icons" icon={faUser}/>
-                                {menuDisplay === true ? <MenuBar setLoginModal={setLoginModal} loginModal={loginModal}></MenuBar> : ''}
+                                {menuDisplay === true ? <MenuBar setLoginModal={setLoginModal} loginModal={loginModal} 
+                                emailModal={emailModal} setEmailModal={setEmailModal}
+                                ></MenuBar> : ''}
                             </div>
                         </div>
                     </div>
                     {
                     loginModal === true ? 
-                    <LoginModalWrap setLoginModal={setLoginModal} loginModal={loginModal}></LoginModalWrap> : 
+                    <LoginModalWrap 
+                    setLoginModal={setLoginModal} loginModal={loginModal}
+                    setEmailModal={setEmailModal} emailModal={emailModal}
+                    ></LoginModalWrap> : 
                     null
+                    }
+                    {
+                        emailModal === true ?
+                        <EmailModal emailModal={emailModal} setEmailModal={setEmailModal}
+                        userEmail={userEmail} setUserEmail={setUserEmail}
+                        correctEmail={correctEmail} setCorrectEmail={setCorrectEmail}
+                        correctPassword={correctPassword} SetcorrectPassword={SetcorrectPassword}
+                        signup={signup} setSignup={setSignup} validEmail={validEmail} setValidEmail={setValidEmail}
+                        ></EmailModal> : null
+                    }
+                    {
+                        correctEmail === true ?
+                        <PasswordModal
+                        emailModal={emailModal} setEmailModal={setEmailModal}
+                        userEmail={userEmail} setUserEmail={setUserEmail}
+                        userPassword={userPassword} setUserPassword={setUserPassword}
+                        correctEmail={correctEmail} setCorrectEmail={setCorrectEmail}
+                        correctPassword={correctPassword} SetcorrectPassword={SetcorrectPassword}
+                        /> : null
+                    }
+                    {
+                        signup === true ?
+                        <SignupModal
+                        emailModal={emailModal} setEmailModal={setEmailModal}
+                        signup={signup} setSignup={setSignup}
+                        /> : null
+
                     }
                     <Search 
                     clickOne={clickOne} setClickOne={setClickOne} setClickTwo={setClickTwo} 
@@ -87,13 +132,15 @@ const Main = () => {
                 <div className="search-section-img-wrap">
                     <div className="search-section-img">
                         <h1>호기심을 자극하는 숙소로 떠나보세요</h1>
-                        <Link to="/List">유연한 검색</Link>
+                        <div className="main-page-to-list-page">
+                            <Link to="/list">유연한 검색</Link>
+                            </div>
                     </div>
                 </div>
             </div>
             <Card></Card>
             <Activity></Activity>
-            <div className="question-section-wrap">
+            <div className="main-question-section-wrap">
                 <div className="question-section">
                     <div className="span-wrap">
                         <span>호스팅에 관해 궁금하신 점이 있나요?</span>

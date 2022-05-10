@@ -12,7 +12,7 @@ const Activity = () => {
         },
         {
             img : Image6,
-            sentance : "집에서 만나는 다양한 즐길 거리여행 중 만나는 이색적인 즐길 거리",
+            sentance : "집에서 만나는 다양한 즐길 거리",
             btn : "온라인 체험"
         }
     ]

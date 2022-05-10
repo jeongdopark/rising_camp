@@ -6,7 +6,6 @@ const InfoCalenderInner =({initMonth, name, btnClick})=>{
 
     const [getMoment, setMoment]=useState(moment());     
     useEffect(() => {
-        console.log(initMonth);
         setMoment(getMoment.clone().add(initMonth, 'month'))
     },[btnClick])
     

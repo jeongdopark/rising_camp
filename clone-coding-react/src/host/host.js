@@ -24,7 +24,6 @@ const Host = () => {
     
     return(
         <div className="host-page-wrap">
-            <Link to="/">홈</Link>
             <NavSection/>
             <FirstVideo onClickBtn={onClickBtn} buttonState={buttonState}/>
             <div className="carousel-section-wrap">

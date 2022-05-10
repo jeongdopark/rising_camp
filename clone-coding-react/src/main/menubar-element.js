@@ -1,13 +1,15 @@
 import Reac, { useEffect } from 'react';
 
 
-const MenuBarElement = ({element, loginModal, setLoginModal}) => {
+const MenuBarElement = ({element, loginModal, setLoginModal, setEmailModal, emailModal}) => {
 
     const onClickModal = () => {
         if(loginModal === false){
             setLoginModal(true)
+            // setEmailModal(true)
         }else{
             setLoginModal(false)
+            // setEmailModal(false)
 
         }
     }

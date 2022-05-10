@@ -189,10 +189,10 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-right : 30px;
-
 }
 
 .control {
     display: flex;
     justify-content: center;
 }
+

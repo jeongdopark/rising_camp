@@ -12,25 +12,25 @@ const Card = () => {
     const [value, onChange] = useState(new Date());
     const cardsElement = [
         {
-            city : 'seoul',
+            city : '서울',
             color : '#bc1a6e',
             image : Image1,
             distance : '2KM 거리'
         },
         {
-            city : 'incheon',
+            city : '인천',
             color : '#CC2D4A',
             image : Image2,
             distance : '29KM 거리'
         },
         {
-            city : 'daegu',
+            city : '대구',
             color : '#DE3151',
             image : Image3,
             distance : '237KM 거리'
         },
         {
-            city : 'daejeon',
+            city : '대전',
             color : '#D93B30',
             image : Image4,
             distance : '140KM 거리'

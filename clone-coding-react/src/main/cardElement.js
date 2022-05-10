@@ -5,8 +5,8 @@ const CardElement = ({prop}) => {
         <div className="city-wrap-common">
             <div className="city-img" style={{backgroundImage:`url(${prop.image})`}}></div>
             <div className="city-info" style={{backgroundColor:`${prop.color}`}}>
-                <h1>{prop.city}</h1>
-                <h3>{prop.distance}</h3>
+                <h1 style={{color:"white"}}>{prop.city}</h1>
+                <h3 style={{color:"white"}}>{prop.distance}</h3>
             </div>
         </div>
     )

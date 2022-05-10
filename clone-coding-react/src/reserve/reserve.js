@@ -76,7 +76,7 @@ const StyleTitleContainer = styled.div`
 `
 
 const StyleMainSection = styled.div`
-    height : 1000px;
+    height : 1200px;
     width : 100%;
 
     .main-section-container{

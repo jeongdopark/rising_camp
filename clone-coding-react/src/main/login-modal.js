@@ -7,22 +7,26 @@ import googleIcon from '../images/google.svg'
 import appleIcon from '../images/apple.svg'
 import mailIcon from '../images/mail.svg'
 import facebookIcon from '../images/facebook.svg'
-const LoginModalWrap = ({loginModal, setLoginModal}) => {
+const LoginModalWrap = ({loginModal, setLoginModal, emailModal, setEmailModal}) => {
 
     const appInfo = [
         {
+            idx : 1,
             img : facebookIcon,
             text : "페이스북으로 로그인하기"
         },
         {
+            idx : 2,
             img : googleIcon,
             text : "구글로 로그인하기"
         },
         {
+            idx : 3,
             img : appleIcon,
             text : "애플로 로그인하기"
         },
         {
+            idx : 4,
             img : mailIcon,
             text : "이메일로 로그인하기"
         }
@@ -30,6 +34,12 @@ const LoginModalWrap = ({loginModal, setLoginModal}) => {
 
     const removeModal = () => {
         setLoginModal(false);
+    }
+
+    const onClickEmail = () => {
+        setLoginModal(false)
+        setEmailModal(true)
+        console.log(emailModal);
     }
 
     return(
@@ -65,18 +75,37 @@ const LoginModalWrap = ({loginModal, setLoginModal}) => {
                                 <span>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</span>
                                 <div className="continue">계속</div>
                             </div>
-                            <div className="login-section-line">
-                                <div className="line-div-wrap">
-                                    <div className="line-div"></div>
+                            <div className="main-login-section-line">
+                                <div className="main-line-div-wrap">
+                                    <div className="main-line-div"></div>
                                 </div>
-                                <div className="text">또는</div>
-                                <div className="line-div-wrap">
-                                    <div className="line-div"></div>
+                                <div className="main-line-text">또는</div>
+                                <div className="main-line-div-wrap" style={{justifyContent:"right"}}>
+                                    <div className="main-line-div"></div>
                                 </div>
                             </div>
                             <div className="login-app">
-                                {appInfo.map((element) => (<LoginApp element={element}></LoginApp>))}
+                                <div className="loginApp-wrap">
+                                    <div className="loginApp-app" style={{backgroundImage:`url(${appInfo[0].img})`}}></div>
+                                    <div className="loginApp-text">{appInfo[0].text}</div>
+                                </div>
+                                <div className="loginApp-wrap">
+                                    <div className="loginApp-app" style={{backgroundImage:`url(${appInfo[1].img})`}}></div>
+                                    <div className="loginApp-text">{appInfo[1].text}</div>
+                                </div>
+                                <div className="loginApp-wrap">
+                                    <div className="loginApp-app" style={{backgroundImage:`url(${appInfo[2].img})`}}></div>
+                                    <div className="loginApp-text">{appInfo[2].text}</div>
+                                </div>
+                                <div className="loginApp-wrap" onClick={onClickEmail}>
+                                    <div className="loginApp-app" style={{backgroundImage:`url(${appInfo[3].img})`}}></div>
+                                    <div className="loginApp-text">{appInfo[3].text}</div>
+                                </div>
+                                {/* {appInfo.map((element) => (element.idx === 4 ? 
+                                <LoginApp onClick={onClickEmail} element={element}></LoginApp> : 
+                                <LoginApp element={element}></LoginApp>))} */}
                             </div>
+                            
                         </div>
                     </div>
                 </div>

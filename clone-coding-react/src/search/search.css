@@ -1,0 +1,352 @@
+@import "~antd/dist/antd.css";
+*{
+    margin : 0 ;
+    padding : 0;
+}
+
+.search-nav-section{
+    width : 100%;
+    
+}
+
+.search-container-box{
+    position: relative;
+    left : 10px;
+    display: flex;
+    width : 100%;
+    height : 50px;
+}
+.search-nav-container{
+    display : flex;
+    width : 97%;
+    flex-direction: row;
+    margin : 0 auto;
+    height : 85px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.search-nav-icon{
+    display : flex;
+    align-items: center;
+}
+
+.search-search-container{
+    display : flex;
+    align-items: center;
+    width : 370px;
+    height : 50px;
+    border-radius: 25px;
+    box-shadow: rgb(0 0 0 / 13%) 0px 1px 2px, rgb(0 0 0 / 13%) 0px 4px 12px !important;
+}
+
+.search-search-container > div{
+    height : 30px;
+    line-height: 30px;
+    
+}
+
+.search-container-box > div{
+    margin : 0 5px 0 5px;
+}
+.box-line{
+    border-right : 1px solid #DDDDDD;
+    border-left : 1px solid #DDDDDD;
+    padding : 0 15px 0 15px
+}
+
+.search-search-container > div{
+    font-weight: 500;
+    font-size : 15px;
+}
+
+.magnify-wrap{
+    position : relative;
+    right : 5px;
+    width : 35px;
+    height : 35px;
+    background-color: #FF385C;
+    border-radius: 50%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-right : 10px;
+}
+
+.menu-container{
+    width : 200px;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-array{
+    display: flex;
+    align-items: center;
+    position : relative;
+    top : 0px;
+}
+
+.host-wrap-container{
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    width : 70px;
+    border : 1px solid #DDDDDD;
+    height : 40px;
+    border-radius: 20px;;
+}
+
+
+.search-filter-tag-section{
+    width : 100%;
+    height : 70px;
+    border-bottom : 1px solid #DDDDDD;
+}
+
+.search-filter-tag-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width : 98%;
+    height : 100%;
+    margin : 0 auto;
+}
+
+.search-filter-tag-down-icon-container{
+    display: flex;
+    align-items: center;
+    width : 16%;
+}
+
+.first-filter-tag{
+    width : 38%;
+}
+
+.second-filter-tag{
+    width : 60%;
+}
+.search-filter-tag-down-icon{
+    padding : 0 15px 0 15px;
+    margin : 0 8px 0 8px;
+    height : 40px;
+    border : 1px solid #DDDDDD;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size : 13px;
+}
+
+.search-filter-tag-element{
+    height : 40px;
+    border : 1px solid #DDDDDD;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 40px;
+    margin-right : 10px;
+}
+
+.search-linear{
+    margin : 0 15px 0 10px;
+    height : 30px;
+    width : 0.1px;
+    background : #717171;
+
+}
+
+.search-filter-tag-down-icon:hover, .search-filter-tag-element:hover{
+    border : 1px solid black;
+    cursor: pointer;
+}
+
+.search-swiper-wrapper:hover > .swiper-button-next{
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 1 ;
+}
+
+.search-swiper-wrapper:hover > .swiper-button-prev{
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 1 ;
+}
+
+
+.search-main-section{
+    width : 100%;
+    height : auto;
+    display: flex;
+}
+
+.search-main-left-section{
+    width : 60%;
+    height : auto;
+    display: block;
+}
+
+.search-main-left-container{
+    width : 95%;
+    
+    margin : 0 auto;
+    margin-top : 20px;
+}
+.search-map-wrapper, .search-main-right-section{
+    position : sticky;
+    top : 20vh;
+    width : 100%;
+    height : 80vh;
+}
+
+.search-main-right-section{
+    width : 100%;
+    height : 100%;
+
+}
+
+.search-mini-text{
+    font-size : 14px;
+    color : #222222;
+}
+
+.briefcase-icon{
+    display: flex;
+    align-items: center;
+    margin-top : 20px;
+}
+
+.search-room-list-container{
+    width : 100%;
+    border-top : 1px solid #DDDDDD;
+    margin-top : 20px;
+}
+
+.search-room-element-container{
+    width : 100%;
+    height : 200px;
+    margin-top : 20px;
+}
+
+.search-room-element-box{
+    display: flex;
+
+    width : 100%;
+    height : 100%;
+}
+
+.search-swiper-wrapper{
+
+    margin : 0;
+    padding : 0;
+    width : 36%;
+    position : relative;
+    left : 0;
+}
+
+.search-room-right-container{
+    margin-left : 20px;
+    width : 60%;
+    height : 100%;
+}
+
+.search-right-container-top{
+    width : 100%;
+    height : 60px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-mini-text{
+    color : #717171;
+    font-size : 15px;
+}
+
+.main-title-text{
+    font-size : 18px;
+    margin-top : 5px;
+}
+
+.search-right-linear{
+    width : 5%;
+    height : 0.1px;
+    background-color: #9e9e9e;
+    margin-bottom : 10px;
+}
+
+.search-right-bottom{
+    display: flex;
+    justify-content: space-between;   
+    align-items: flex-end;  
+    height : 89px;
+}
+
+.search-star-icon{
+    display: flex;
+}
+
+.search-price-wrap{
+    display: flex;
+}
+
+.font-bold-price{
+    font-weight: bold;
+    font-size : 18px;
+}
+
+.search-price-mini-text{
+    margin-top : 5px;
+    display: flex;
+    justify-content: right;
+    font-size : 13px;
+    color : #717171;
+    text-decoration: underline;
+}
+
+
+.nav-all-container{
+    position: sticky;
+    top : 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.search-page-number-container{
+    width : 100%;
+    height : 200px;
+    margin-top : 30px;
+}
+
+.search-page-number-inner{
+    width : 95%;
+    margin : 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top : 50px;
+    border-top : 1px solid #DDDDDD;
+}
+
+.search-page-number{
+    display: flex;
+}
+
+.search-page-number > div {
+    margin : 0 15px 0 15px;
+    font-weight: 600;
+}
+
+.search-page-number-text{
+    margin-top : 20px;
+    font-size : 15px;
+}
+
+.search-page-number-warning{
+    font-size : 13px;
+    color : #717171;
+    margin-top : 25px;
+}
+
