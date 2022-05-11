@@ -3,9 +3,10 @@ import React, { useState ,useRef } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
-
+import { useSelector, useDispatch } from 'react-redux';
 const PasswordModal = ({SetcorrectPassword, correctPassword, emailModal, setEmailModal, userEmail, setUserEmail, userPassword, setUserPassword, correctEmail, setCorrectEmail}) => {
-
+    const password_valid = useSelector((state) => state.passwordValid)
+    console.log(password_valid);
     const inputPassword = useRef(null);
     
     const removeModal = () => {
@@ -20,17 +21,14 @@ const PasswordModal = ({SetcorrectPassword, correctPassword, emailModal, setEmai
     const onClickValid = () => {
         setUserPassword(inputPassword.current.value)
         if(correctPassword === userPassword){
-            setCorrectEmail(false)
+                setCorrectEmail(false)
                 setEmailModal(false)
                 setUserEmail(null)
                 setUserPassword(null)
-                console.log('비밀번호 일치');
-                console.log('로그인 완료');
-
             }
         }
     
-
+    
     
     return(
         <>

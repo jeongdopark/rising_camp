@@ -17,13 +17,21 @@ import LoginModalWrap from './login-modal';
 import Search from './search.js'
 import EmailModal from './email-modal';
 import PasswordModal from './password-modal';
+import CreateAccount from './createAccount';
 import SignupModal from './signup';
+import { useSelector, useDispatch } from 'react-redux';
+import { menuModalDisplay } from '../reducer/menuModal';
+
 const Main = () => {
-    const [ menuDisplay, setMenuDisplay ] = useState(false);
+    const menuModal = useSelector(state => state.menuModal)
+    const emailModal = useSelector(state => state.email)
+    const loginModal = useSelector((state) => state.loginModal)
+    const passwordModal = useSelector((state) => state.password)
+    const signupModal = useSelector((state) => state.signup)
+    const dispatch = useDispatch();
 
-
-    const [ loginModal, setLoginModal ] = useState(false);
-    const [ emailModal, setEmailModal ] = useState(false);
+    // const [ loginModal, setLoginModal ] = useState(false);
+    // const [ emailModal, setEmailModal ] = useState(false);
     const [ userEmail, setUserEmail ] = useState('')
     const [ userPassword, setUserPassword ] = useState('')
     const [ correctEmail, setCorrectEmail ] = useState(false)
@@ -37,10 +45,10 @@ const Main = () => {
     const [ validEmail, setValidEmail ] = useState(false)
 
     const menuOnClick = () => {
-        if(menuDisplay === false){
-            setMenuDisplay(true)
+        if(menuModal.boolean === false){
+            dispatch(menuModalDisplay())
         }else{
-            setMenuDisplay(false)
+            dispatch(menuModalDisplay())
         }
     }
 
@@ -65,23 +73,20 @@ const Main = () => {
                             <div className="mainpage-host-wrap" onClick={()=>menuOnClick()}>
                                 <FontAwesomeIcon className="host-wrap-icons" icon={faBars}/>
                                 <FontAwesomeIcon className="host-wrap-icons" icon={faUser}/>
-                                {menuDisplay === true ? <MenuBar setLoginModal={setLoginModal} loginModal={loginModal} 
-                                emailModal={emailModal} setEmailModal={setEmailModal}
-                                ></MenuBar> : ''}
+                                {menuModal.boolean === true ? <MenuBar ></MenuBar> : ''}
                             </div>
                         </div>
                     </div>
                     {
-                    loginModal === true ? 
+                    loginModal.boolean === true ? 
                     <LoginModalWrap 
-                    setLoginModal={setLoginModal} loginModal={loginModal}
-                    setEmailModal={setEmailModal} emailModal={emailModal}
+                     emailModal={emailModal}
                     ></LoginModalWrap> : 
                     null
                     }
                     {
-                        emailModal === true ?
-                        <EmailModal emailModal={emailModal} setEmailModal={setEmailModal}
+                        emailModal.boolean === true ?
+                        <EmailModal emailModal={emailModal}
                         userEmail={userEmail} setUserEmail={setUserEmail}
                         correctEmail={correctEmail} setCorrectEmail={setCorrectEmail}
                         correctPassword={correctPassword} SetcorrectPassword={SetcorrectPassword}
@@ -89,9 +94,8 @@ const Main = () => {
                         ></EmailModal> : null
                     }
                     {
-                        correctEmail === true ?
+                        passwordModal.boolean === true ?
                         <PasswordModal
-                        emailModal={emailModal} setEmailModal={setEmailModal}
                         userEmail={userEmail} setUserEmail={setUserEmail}
                         userPassword={userPassword} setUserPassword={setUserPassword}
                         correctEmail={correctEmail} setCorrectEmail={setCorrectEmail}
@@ -99,9 +103,8 @@ const Main = () => {
                         /> : null
                     }
                     {
-                        signup === true ?
-                        <SignupModal
-                        emailModal={emailModal} setEmailModal={setEmailModal}
+                        signupModal.boolean === true ?
+                        <CreateAccount
                         signup={signup} setSignup={setSignup}
                         /> : null
 

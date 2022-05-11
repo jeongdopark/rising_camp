@@ -1,16 +1,16 @@
 import Reac, { useEffect } from 'react';
-
-
-const MenuBarElement = ({element, loginModal, setLoginModal, setEmailModal, emailModal}) => {
+import { useSelector, useDispatch } from 'react-redux';
+import { loginModalDisplay } from '../reducer/loginModal';
+const MenuBarElement = ({element}) => {
+    const loginModal = useSelector((state) => state.loginModal)
+    const login_dispatch = useDispatch()
 
     const onClickModal = () => {
         if(loginModal === false){
-            setLoginModal(true)
+            login_dispatch(loginModalDisplay())
             // setEmailModal(true)
         }else{
-            setLoginModal(false)
-            // setEmailModal(false)
-
+            login_dispatch(loginModalDisplay())
         }
     }
 

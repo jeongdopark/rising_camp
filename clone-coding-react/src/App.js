@@ -13,7 +13,9 @@ import CalendarTest from './calendarTest';
 import RoomInfo from './roominfo/roomInfo';
 import GoogleMapTest from './googleMap';
 import SearchPage from './search/search-page';
+import SkeletonRoomInfo from './roominfo/skeleton-roominfo';
 import TestPage from './testPage';
+import CreateAccount from './main/createAccount';
 const App = () => {
     return(
         <BrowserRouter>
@@ -26,6 +28,8 @@ const App = () => {
                 <Route path="/reserve" element={<Reserve/>}/>
             </Routes>
         </BrowserRouter>
+        // <CreateAccount/>
+        // <SkeletonRoomInfo/>
         // <Router>
         //     <Routes>
         //         <Route path="/" element={<Main/>}/>

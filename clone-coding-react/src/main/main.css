@@ -2,6 +2,9 @@
     margin : 0;
     padding : 0;
 }
+input{
+    border : none;
+}
 
 .host-wrap-icons{
     color : black;
@@ -14,6 +17,7 @@
     transition-property: all;
     transition-duration: 2s;
     transition-timing-function: ease;
+    
 }
 .test{
     position : fixed;
@@ -797,7 +801,7 @@
     position: absolute;
     border-radius: 10px;
     background-color: white;
-    width: 38%;
+    width: 40%;
     height : 88%;
     transform : translate(-50%, 40%);
     animation-duration: 0.4s;
@@ -873,6 +877,8 @@
     font-weight: bold;
 }
 
+
+
 .password-modal-title-content{
     width : 100%;
     height : 3.5rem;
@@ -894,11 +900,14 @@
 }
 
 .login-section{
-    padding : 24px;
+    padding : 2px 24px 15px 24px;
+    height : 600px;
+    overflow: scroll;
 }
 
 .login-greeting{
-    font-size : 25px;
+    margin-top : 20px;
+    font-size : 20px;
     font-weight: 500;
 }
 
@@ -957,9 +966,30 @@
     font-size : 18px;
 }
 
+
+.create-account-name{
+    width : 100%;
+    border-radius: 0 0 10px 10px;
+    border : 1px solid rgb(133, 133, 133);
+    border-top : 0;
+    margin-bottom : 5px;
+}
+
+.create-account-name-inner{
+    position: relative;
+    height : 100%;
+    padding : 10px;
+}
+
 .login-number-inner > input:focus{
     outline: none;
 }
+
+.placeholder-div {
+    height : 90%;
+    font-size : 12px;
+}
+
 
 .nation-number{
     position: absolute;
@@ -985,6 +1015,18 @@
     cursor: pointer;
 }
 
+.create-account-continue{
+    width : 100%;
+    height : 50px;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    color : white;
+    font-weight: bold;
+    margin-top : 25px;
+    cursor: pointer;
+}
 
 
 .main-login-section-line{
@@ -1202,4 +1244,58 @@ text-decoration: none;
     width : 100px;
     height : 100px;
     background-color: #6F019C;
+}
+
+.create-account-title{
+    font-size : 1rem;
+}
+
+.create-account-birth-section{
+    width : 100%;
+    height : 100px;
+    margin-top : 18px;
+}
+
+.create-account-birth-container{
+    border-radius: 10px;
+    height : 60px;
+    display: flex;
+    flex-direction: column;
+    padding : 10px;
+    border : 1px solid #717171;
+    margin-bottom : 5px;
+}
+
+.create-account-birth-section > span{
+    font-size : 12px;
+}
+
+.create-account-password-container{
+    border-radius: 10px;
+    height : 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding : 10px;
+    border : 1px solid #717171;
+    margin-bottom : 5px;
+    align-items: center;
+}
+
+.create-account-line{
+    width : 98%;
+    margin : 0 auto;
+    height : 0.1px;
+    background-color: #d0d0d0;
+    margin-top : 25px;
+}
+
+
+.create-account-checkbox-container{
+    display: flex;
+    margin-top : 20px;
+}
+
+.create-account-checkbox-container > div{
+    margin-left : 16px;
 }

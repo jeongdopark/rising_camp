@@ -7,9 +7,17 @@ import googleIcon from '../images/google.svg'
 import appleIcon from '../images/apple.svg'
 import mailIcon from '../images/mail.svg'
 import facebookIcon from '../images/facebook.svg'
-
-const EmailModal = ({SetcorrectPassword,correctPassword,validEmail, setValidEmail,signupModal, setSignupModal ,emailModal, setEmailModal, userEmail, setUserEmail, userPassword, setUserPassword, correctEmail, setCorrectEmail}) => {
-
+import { useSelector, useDispatch } from 'react-redux';
+import { account } from '../reducer/validAccount';
+import { emailModalDisplay } from '../reducer/email';
+import { password } from '../reducer/password';
+import { signup } from '../reducer/signup'; // 액션 함수 불러오기'
+import { user_email } from '../reducer/userEmail';
+const EmailModal = () => {
+    const valid_account = useSelector((state) => state.valid)
+    const user_email_element = useSelector((state) => state.userEmail)
+    const dispatch = useDispatch();
+    
     const appInfo = [
         {
             img : facebookIcon,
@@ -29,15 +37,6 @@ const EmailModal = ({SetcorrectPassword,correctPassword,validEmail, setValidEmai
         }
     ]
 
-    const removeModal = () => {
-        setEmailModal(false);
-    }
-
-
-    const [ userInfo, setUserInfo ] = useState({
-        email : userEmail,
-        password : userPassword
-    })
 
     let USERS = []
     const userInfoTest1 = {id : 'powerdn123', password : '123123'}
@@ -45,34 +44,45 @@ const EmailModal = ({SetcorrectPassword,correctPassword,validEmail, setValidEmai
     USERS = USERS.concat(userInfoTest1, userInfoTest2)
     localStorage.setItem('userInfo', JSON.stringify(USERS))
     const inputValue = useRef(null)
-    
-    const onClickContinue = () => {
+
+
+    useEffect(() => {
         const LOCALSTORAGE_INFO = JSON.parse(localStorage.getItem('userInfo'))
-        setUserEmail(inputValue.current.value)
-        
         LOCALSTORAGE_INFO.forEach((e) => {
-            if(e.id === userEmail){
-                setCorrectEmail(true)
-                setEmailModal(false)
-                setValidEmail(true)
-                SetcorrectPassword(e.password)
-                console.log('이메일 일치');
-            }
-        })
-        // if(validEmail === false){
-        //     setEmailModal(false)
-        //     setSignupModal(true)
-        // }
+        if(e.id === user_email_element.email){
+            dispatch(emailModalDisplay())   // 이메일 모달창 닫기
+            dispatch(password())
+            console.log('일치하는 이메일이 있다');
+        }
+    })
+    return () => {
+        dispatch(account()) // 일치하는 이메일 없음
+    }
+    },[user_email_element])
 
+    useEffect(() => {
+        console.log(valid_account);
+        if(user_email_element.email.length > 0 && valid_account.boolean === false){     // 일치하는 이메일이 없을 경우
+            dispatch(signup())  // 회원가입 모달창 열기
+            dispatch(emailModalDisplay())   // 이메일 모달창 닫기
+        }  
+    }, [valid_account])
 
+    
+
+    const onClickContinue = () => {
+        console.log('email 제출');
+        dispatch(user_email(inputValue.current.value))
+         
     }   
 
     
-    
+
+     
     
     return(
         <div className="login-modal-wrap">
-            <div className="login-modal-container" onClick={()=>removeModal()}>
+            <div className="login-modal-container">
                 <div className="email-login-modal-content-container" onClick={(e)=>e.stopPropagation()}>
                     <div className="login-modal-content">
                         <div className="title-content">
@@ -80,7 +90,7 @@ const EmailModal = ({SetcorrectPassword,correctPassword,validEmail, setValidEmai
                             <span>로그인 또는 회원가입</span>
                         </div>
                         <div className="login-section">
-                            <span className="login-greeting">에어비앤비에 오신 것을 환영합니다.</span>
+                            <div className="login-greeting">에어비앤비에 오신 것을 환영합니다.</div>
                             <div className="email-login-input-container">
                                 <input ref={inputValue} className="email-login-input" placeholder='이메일'/>
                             </div>

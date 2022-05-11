@@ -7,7 +7,11 @@ import googleIcon from '../images/google.svg'
 import appleIcon from '../images/apple.svg'
 import mailIcon from '../images/mail.svg'
 import facebookIcon from '../images/facebook.svg'
-const LoginModalWrap = ({loginModal, setLoginModal, emailModal, setEmailModal}) => {
+import { useDispatch } from 'react-redux';
+import { loginModalDisplay } from '../reducer/loginModal';
+import { emailModalDisplay } from '../reducer/email';
+const LoginModalWrap = ({loginModal, setLoginModal, setEmailModal}) => {
+    const dispatch = useDispatch();
 
     const appInfo = [
         {
@@ -37,9 +41,8 @@ const LoginModalWrap = ({loginModal, setLoginModal, emailModal, setEmailModal}) 
     }
 
     const onClickEmail = () => {
-        setLoginModal(false)
-        setEmailModal(true)
-        console.log(emailModal);
+        dispatch(loginModalDisplay())
+        dispatch(emailModalDisplay())
     }
 
     return(
@@ -52,7 +55,7 @@ const LoginModalWrap = ({loginModal, setLoginModal, emailModal, setEmailModal}) 
                             <span>로그인 또는 회원가입</span>
                         </div>
                         <div className="login-section">
-                            <span className="login-greeting">에어비앤비에 오신 것을 환영합니다.</span>
+                            <div className="login-greeting">에어비앤비에 오신 것을 환영합니다.</div>
                             <div className="login-select-section">
                                 <div className="login-nation">
                                     <div className="login-nation-inner">

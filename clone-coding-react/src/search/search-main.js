@@ -52,6 +52,8 @@ import Image34 from '../images/34.jpeg'
 import RoomElement from './search-room-element';
 import SkeletonSection from './skeleton';
 const SearchMain = () => {
+
+    
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {

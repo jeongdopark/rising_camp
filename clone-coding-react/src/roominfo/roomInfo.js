@@ -58,7 +58,7 @@ import './roomInfo.css';
 import GoogleMapTest from '../googleMap';
 import InfoFooter from './info-footer';
 import TopNav from './top-nav';
-
+import SkeletonRoomInfo from './skeleton-roominfo';
 import { createStore } from 'redux'
 import { Provider, useSelector, useDispatch } from 'react-redux';
 
@@ -78,6 +78,9 @@ const store = createStore(reducer)
 const RoomInfo = () => {
     const location = useLocation()
     console.log(location.state.data);
+
+
+
     const [ topNavDisplay, setTopNavDisplay ] = useState(false);
     const [ menuDisplay, setMenuDisplay ] = useState(false);
     const [ loginModal, setLoginModal ] = useState(false);
@@ -101,6 +104,8 @@ const RoomInfo = () => {
     return(
         <>  
             {scrollPosition > 580 ? <Provider store={store}><TopNav scrollPosition={scrollPosition}></TopNav></Provider> : null}
+            {loading ? <SkeletonRoomInfo/> : 
+            <>
             <div className="roomInfo-nav-section">
                 <div className="roomInfo-nav-container">
                     <div className="roomInfo-nav-icon">
@@ -478,7 +483,8 @@ const RoomInfo = () => {
                     <InfoFooter></InfoFooter>
                 </div>
             </div>
-            
+        </>
+            }
         </>
     )
 }
