@@ -7,6 +7,7 @@ import password from './password';
 import signup from './signup';
 import passwordValid from './passwordvalid';
 import userEmail from './userEmail';
+import correctPassword from './correctPassword';
 const rootReducer = combineReducers({
     loginModal,
     menuModal,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
     password,
     signup,
     passwordValid,
-    userEmail
+    userEmail,
+    correctPassword
 })
 
 export default rootReducer;

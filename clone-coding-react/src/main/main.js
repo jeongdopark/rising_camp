@@ -23,6 +23,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { menuModalDisplay } from '../reducer/menuModal';
 
 const Main = () => {
+
     const menuModal = useSelector(state => state.menuModal)
     const emailModal = useSelector(state => state.email)
     const loginModal = useSelector((state) => state.loginModal)
@@ -52,6 +53,7 @@ const Main = () => {
         }
     }
 
+    
     return(
         <div className="page-wrap">
             <div className="nav-wrap">
@@ -71,43 +73,39 @@ const Main = () => {
                             <div>호스트 되기</div>
                             <FontAwesomeIcon icon={faGlobe}/>
                             <div className="mainpage-host-wrap" onClick={()=>menuOnClick()}>
-                                <FontAwesomeIcon className="host-wrap-icons" icon={faBars}/>
-                                <FontAwesomeIcon className="host-wrap-icons" icon={faUser}/>
+                                <div className="mainpage-svg-container">
+                                    <div className="host-svg-wrap">
+                                        <svg className="host-svg-wrap" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" ><g fill="none" fill-rule="nonzero"><path d="m2 16h28"></path>
+                                            <path d="m2 24h28"></path>
+                                            <path d="m2 8h28"></path></g>
+                                        </svg>
+                                    </div>
+                                    <div className="user-svg-wrap">
+                                        <svg className="user-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false">
+                                            <path d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
                                 {menuModal.boolean === true ? <MenuBar ></MenuBar> : ''}
                             </div>
                         </div>
                     </div>
                     {
                     loginModal.boolean === true ? 
-                    <LoginModalWrap 
-                     emailModal={emailModal}
-                    ></LoginModalWrap> : 
-                    null
+                    <LoginModalWrap ></LoginModalWrap> : null
                     }
                     {
                         emailModal.boolean === true ?
-                        <EmailModal emailModal={emailModal}
-                        userEmail={userEmail} setUserEmail={setUserEmail}
-                        correctEmail={correctEmail} setCorrectEmail={setCorrectEmail}
-                        correctPassword={correctPassword} SetcorrectPassword={SetcorrectPassword}
-                        signup={signup} setSignup={setSignup} validEmail={validEmail} setValidEmail={setValidEmail}
-                        ></EmailModal> : null
+                        <EmailModal ></EmailModal> : null
                     }
                     {
                         passwordModal.boolean === true ?
-                        <PasswordModal
-                        userEmail={userEmail} setUserEmail={setUserEmail}
-                        userPassword={userPassword} setUserPassword={setUserPassword}
-                        correctEmail={correctEmail} setCorrectEmail={setCorrectEmail}
-                        correctPassword={correctPassword} SetcorrectPassword={SetcorrectPassword}
-                        /> : null
+                        <PasswordModal/> : null
                     }
                     {
                         signupModal.boolean === true ?
-                        <CreateAccount
-                        signup={signup} setSignup={setSignup}
-                        /> : null
-
+                        <CreateAccount/> : null
                     }
                     <Search 
                     clickOne={clickOne} setClickOne={setClickOne} setClickTwo={setClickTwo} 

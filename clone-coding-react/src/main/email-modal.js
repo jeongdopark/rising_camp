@@ -13,6 +13,7 @@ import { emailModalDisplay } from '../reducer/email';
 import { password } from '../reducer/password';
 import { signup } from '../reducer/signup'; // 액션 함수 불러오기'
 import { user_email } from '../reducer/userEmail';
+import { correct_password } from '../reducer/correctPassword'; 
 const EmailModal = () => {
     const valid_account = useSelector((state) => state.valid)
     const user_email_element = useSelector((state) => state.userEmail)
@@ -38,31 +39,34 @@ const EmailModal = () => {
     ]
 
 
-    let USERS = []
-    const userInfoTest1 = {id : 'powerdn123', password : '123123'}
-    const userInfoTest2 = {id : 'powerdn1234', password : '123123'}
-    USERS = USERS.concat(userInfoTest1, userInfoTest2)
-    localStorage.setItem('userInfo', JSON.stringify(USERS))
+
     const inputValue = useRef(null)
 
 
     useEffect(() => {
-        const LOCALSTORAGE_INFO = JSON.parse(localStorage.getItem('userInfo'))
-        LOCALSTORAGE_INFO.forEach((e) => {
-        if(e.id === user_email_element.email){
-            dispatch(emailModalDisplay())   // 이메일 모달창 닫기
-            dispatch(password())
-            console.log('일치하는 이메일이 있다');
+        console.log('이메일 모달창');
+        let LOCALSTORAGE_INFO = JSON.parse(localStorage.getItem('userInfo'))
+
+        if(LOCALSTORAGE_INFO !== null){
+            LOCALSTORAGE_INFO.forEach((e) => {
+                if(e.id === user_email_element.email){
+                    dispatch(emailModalDisplay())   // 이메일 모달창 닫기
+                    dispatch(password())
+                    dispatch(correct_password(e.userPassword))
+                    console.log(e.userPassword);
+                    console.log('일치하는 이메일이 있다');
+                    }
+            })
         }
-    })
     return () => {
         dispatch(account()) // 일치하는 이메일 없음
     }
     },[user_email_element])
 
     useEffect(() => {
-        console.log(valid_account);
+        console.log('이메일 비교 useEffect');
         if(user_email_element.email.length > 0 && valid_account.boolean === false){     // 일치하는 이메일이 없을 경우
+            console.log('if문 내부');
             dispatch(signup())  // 회원가입 모달창 열기
             dispatch(emailModalDisplay())   // 이메일 모달창 닫기
         }  
@@ -73,13 +77,8 @@ const EmailModal = () => {
     const onClickContinue = () => {
         console.log('email 제출');
         dispatch(user_email(inputValue.current.value))
-         
     }   
 
-    
-
-     
-    
     return(
         <div className="login-modal-wrap">
             <div className="login-modal-container">
