@@ -1,0 +1,115 @@
+
+@import '~antd/dist/antd.css';
+.example {
+    margin: 20px 0;
+    margin-bottom: 20px;
+    padding: 30px 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+
+  .site-layout-content {
+    min-height: 280px;
+    padding: 24px;
+    background: #fff;
+    overflow: scroll;
+  }
+  #components-layout-demo-top .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .ant-row-rtl #components-layout-demo-top .logo {
+    float: right;
+    margin: 16px 0 16px 24px;
+  }
+
+.newsItemBlock{
+    display: flex;
+}
+
+.newsItemBlock{
+    width : 99%;
+    margin : 0 auto;
+    height : 220px;
+    position: relative;
+}
+
+.thumbnail{
+    width : 200px;
+    height : 200px;
+}
+
+.thumbnail-IMG{
+    width : 100%;
+    height : 100%;
+    object-fit: cover; 
+}
+
+.userIcon{
+
+    font-size : 20px;
+    color : white;
+    z-index : 100;
+    position: absolute;
+    right : 50px;
+    top : 25px;
+    cursor: pointer;
+}
+
+.contents{
+    margin-left: 20px;
+}
+
+.contentDescription{
+    width : 60%;
+    height : 60%;
+}
+
+.newsItemBlock{
+    border-bottom : 1px solid #d0d0d0;
+    margin-top : 20px;
+}
+
+.star-icon{
+    font-size : 20px;
+    position : absolute;
+    right : 200px;
+    top : 8px;
+    
+    cursor: pointer;
+}
+
+.userInfoModal{
+    position : absolute;
+    top : 0;
+    right : 50px;
+}
+
+.header-container{
+    position : sticky;
+    top : 0;
+    z-index : 100;
+}
+
+.userImg-wrapper{
+    width : 50px;
+    height : 50px;
+    border-radius: 10px;;
+}
+
+.userImg{
+    border-radius: 50%;
+}
+
+
+.info-container{
+    display : flex;
+}
+
+.userInfo-wrapper{
+    margin-left : 20px;
+}

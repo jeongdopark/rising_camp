@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
     menuModal,
     valid,
     email,
-    password,
+    password,  
     signup,
     passwordValid,
     userEmail,
